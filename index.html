@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+<link rel="canonical" href="https://developer.swift.com/reference" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #484848} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #FFFFFF;} .eu-cookie-withdraw-tab { border-color: #FFFFFF;}</style>
+<link rel="icon" href="/themes/custom/swift_devportal_9/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>API Reference | Swift Developer Portal</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_k3ioINB1rQK4_nAVCOskGLshcg0G_p7xCe4Y1wmC-Qk.css?delta=0&amp;language=en&amp;theme=swift_devportal_9&amp;include=eJx9j-sOwyAIhV_Izt97GoMWja0WorRd335uWdZduiUkcD5OwsGCG41QK9Z2n81Qlf2xio4mVbcqmBuvqOoavZgeF6YikMxZh0QWUldlS3EKfwyuRJaqVrSeSjaWSKoUYP1FFM7GEY0RW8ucIkwO9RFshzzMSVQgCgmNQNBB8ruE8KlPMMBF7QmYmBYsL0SIkkR-vAMcTUGPBW9B7qxrrHuyQ1_BntwVt76TOg" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-nrwoY8z0/iCnnY9J1g189dfuRMCdI5JBwgvzKvwXC4dZ+145UNBUs+VdeG/TUuYRqlQbMlL4l8U3yT7pVss9Rg==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-jM5OBHt8tKkl65deNLp2dhFMAwoqHBIbzSW0WiRRwJfHzGoxAFuCowGd9hYi1vU8ce5xpa5IGmZBJujm/7rVtw==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.2.0/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-U2uRfTiJxR2skZ8hIFUv5y6dOBd9s8xW+YtYScDkVzHEen0kU0G9mH8F2W27r6kWdHc0EKYGY3JTT3C4pEN+/g==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.2.0/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-JXQ3Lp7Oc2/VyHbK4DKvRSwk2MVBTb6tV5Zv/3d7UIJKlNEGT1yws9vwOVUkpsTY0o8zcbCLPpCBG2NrZMBJyQ==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-ZbcpXUXjMO/AFuX8V7yWatyCWP4A4HMfXirwInFWwcxibyAu7jHhwgEA1jO4Xt/UACKU29cG5MxhF/i8SpfiWA==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-kTMXGtKrWAdF2+qSCfCTa16wLEVDAAopNlklx4qPXPMamBQOFGHXz0HDwz1bGhstsi17f2SYVNaYVRHWYeg3RQ==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-tGFFYdzcicBwsd5EPO92iUIytu9UkQR3tLMbORL9sfi/WswiHkA1O3ri9yHW+5dXk18Rd+pluMeDBrPKSwNCvw==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_SUkhd9rYvnj3j_4btLkvEYTb5DzivfC_CCM2KLqDCis.css?delta=9&amp;language=en&amp;theme=swift_devportal_9&amp;include=eJx9j-sOwyAIhV_Izt97GoMWja0WorRd335uWdZduiUkcD5OwsGCG41QK9Z2n81Qlf2xio4mVbcqmBuvqOoavZgeF6YikMxZh0QWUldlS3EKfwyuRJaqVrSeSjaWSKoUYP1FFM7GEY0RW8ucIkwO9RFshzzMSVQgCgmNQNBB8ruE8KlPMMBF7QmYmBYsL0SIkkR-vAMcTUGPBW9B7qxrrHuyQ1_BntwVt76TOg" />
+
+      
+        <script >bazadebezolkohpepadr="585244498"</script><script type="text/javascript" src="https://developer.swift.com/akam/13/22e21cf8"  defer></script></head>
+<body class="body_classes front">
+<a href="#main-content" class="visually-hidden focusable skip-link">
+  Skip to main content
+</a>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJJ4B6Q"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+          <div class="search-modal-container">
+      
+
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-swift-devportal-9-search-form-narrow" role="search">
+  
+    
+      <div class="header-search-btn">
+          <svg class="svg-icon-search" width="20px" height="20px" viewBox="0 0 512 512" aria-hidden="true" data-prefix="fal" data-icon="search" xmlns="http://www.w3.org/2000/svg">
+      <path class="svg-icon-search__path" d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"></path>
+     </svg>
+    </div>
+    <div class="expanded-search">
+      
+<div class="add_my_app_options">
+  <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+    <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">
+        <div class="label-new">Search
+    </div>
+    </label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary fa-light fa-magnifying-glass icon-only"><span class="sr-only">Search</span><svg class="svg-icon-search" width="20px" height="20px" viewBox="0 0 512 512" aria-hidden="true" data-prefix="fal" data-icon="search" xmlns="http://www.w3.org/2000/svg"><path class="svg-icon-search__path" d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"></path></svg></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+  
+  </form>
+</div>
+
+      <button type="button" class="close-modal-button">×</button>
+    </div>
+  </div>
+
+
+    </div>
+    <header class="navbar navbar-default container-fluid header__default" id="navbar" role="banner">
+      <div class="container-fluid">
+            <div class="navbar-header">
+          <div class="region region-navigation">
+          <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+            <svg width="274" height="75" viewBox="0 0 284 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40.0012 20C28.9734 20 20 28.9711 20 39.9988C20 51.0266 28.9711 60 40.0012 60C51.0312 60 60.0023 51.0289 60.0023 39.9988C60 28.9711 51.0289 20 40.0012 20ZM55.3966 29.6388H50.6344C50.1441 28.3315 49.5605 27.1059 48.8836 25.9924C48.0105 24.5521 47.0231 23.3545 45.9562 22.4161C49.8383 23.735 53.1439 26.3029 55.3966 29.6388ZM50.9705 39.2798H40.7202V31.0767H49.6259C50.4219 33.5279 50.9028 36.3175 50.9705 39.2798ZM40.7202 40.7178H50.9705C50.9028 43.6825 50.4243 46.4698 49.6259 48.9209H40.7202V40.7178ZM49.1053 29.6388H40.7202V21.4777C44.2078 21.8605 47.2565 25.0096 49.1053 29.6388ZM39.2822 29.6388H30.897C32.7435 25.0096 35.7946 21.8605 39.2822 21.4777V29.6388ZM34.0438 22.4161C32.9746 23.3545 31.9895 24.5521 31.1164 25.9924C30.4395 27.1083 29.8559 28.3338 29.3656 29.6388H24.6034C26.8561 26.3029 30.164 23.735 34.0438 22.4161ZM23.728 31.0767H28.8777C28.1004 33.6049 27.6592 36.3898 27.5961 39.2798H21.4543C21.5664 36.3175 22.3788 33.5279 23.728 31.0767ZM21.4543 40.7178H27.5985C27.6615 43.6102 28.1004 46.3928 28.8801 48.9209H23.728C22.3788 46.4698 21.5664 43.6802 21.4543 40.7178ZM24.6058 50.3589H29.368C29.8582 51.6662 30.4418 52.8917 31.1188 54.0053C31.9918 55.4456 32.9793 56.6431 34.0461 57.5816C30.164 56.2626 26.8561 53.6948 24.6058 50.3589ZM39.2822 58.52C35.7946 58.1371 32.7435 54.988 30.897 50.3566H39.2822V58.52ZM39.2822 48.9209H30.3764C29.5781 46.4698 29.0995 43.6802 29.0318 40.7178H39.2822V48.9209ZM29.0318 39.2798C29.0995 36.3151 29.5781 33.5279 30.3764 31.0767H39.2822V39.2798H29.0318ZM40.7202 58.52V50.3566H49.1053C47.2565 54.988 44.2078 58.1371 40.7202 58.52ZM45.9586 57.5816C47.0277 56.6431 48.0128 55.4456 48.8859 54.0053C49.5629 52.8894 50.1465 51.6638 50.6367 50.3589H55.3989C53.1439 53.6948 49.8383 56.2626 45.9586 57.5816ZM56.2743 48.9209H51.1246C51.902 46.3928 52.3432 43.6078 52.4062 40.7178H58.5503C58.4359 43.6802 57.6236 46.4698 56.2743 48.9209ZM52.4039 39.2798C52.3408 36.3875 51.902 33.6049 51.1223 31.0767H56.272C57.6212 33.5279 58.4313 36.3175 58.5457 39.2798H52.4039Z" />
+        <path d="M115.031 34.3262H111.758V52.2124H115.031V34.3262Z" />
+        <path d="M113.395 27.5168C112.202 27.5168 111.235 28.4832 111.235 29.6761C111.235 30.869 112.202 31.8354 113.395 31.8354C114.588 31.8354 115.554 30.869 115.554 29.6761C115.554 28.4832 114.588 27.5168 113.395 27.5168Z" />
+        <path d="M126.369 36.1961H121.607V33.5932C121.607 31.7701 122.872 30.7243 125.076 30.7243H126.369V27.5168L125.074 27.5191C120.916 27.5565 118.334 29.8839 118.334 33.5932V52.2148H121.607V39.0604H126.369V36.1961Z" />
+        <path d="M136.538 39.0721V36.2101H131.776V27.5168H128.503V46.15C128.503 49.8594 131.085 52.1868 135.242 52.2241L136.538 52.2264V49.019H135.245C133.041 49.019 131.776 47.9732 131.776 46.15V39.0721H136.538Z" />
+        <path d="M109.321 34.3262H105.897L102.446 48.0478L99.0873 34.3262H95.5296L92.1704 48.0478L88.7202 34.3262H85.2933L90.2866 52.2124H94.0076L97.3084 38.8433L100.607 52.2124H104.33L109.321 34.3262Z" />
+        <path d="M71.2868 34.2515C71.2868 31.8681 73.4041 30.6519 76.3338 30.6519C78.6355 30.6519 80.7248 31.8704 82.0181 33.5232L84.5392 31.3779C82.7884 28.9454 79.6603 27.5168 76.2778 27.5168C71.0277 27.5168 67.7572 30.7453 67.7806 34.2189C67.7806 43.5658 81.5209 38.9904 81.5209 45.4427C81.5209 47.7444 79.4619 49.2944 76.3362 49.2944C73.5325 49.2944 71.2285 47.602 70.4301 45.7625L67.3697 47.3382C68.733 50.5177 72.2159 52.5159 76.2428 52.5159C81.4205 52.5159 84.9431 49.6072 84.9431 45.4333C84.9431 35.8413 71.2868 39.8985 71.2868 34.2515Z" />
+        <path d="M169.675 48H166.616V46.1719C166.108 46.8828 165.507 47.4141 164.812 47.7656C164.124 48.1094 163.429 48.2812 162.726 48.2812C161.296 48.2812 160.069 47.707 159.046 46.5586C158.03 45.4023 157.522 43.793 157.522 41.7305C157.522 39.6211 158.019 38.0195 159.011 36.9258C160.003 35.8242 161.257 35.2734 162.772 35.2734C164.163 35.2734 165.366 35.8516 166.382 37.0078V30.8203H169.675V48ZM160.886 41.5078C160.886 42.8359 161.069 43.7969 161.437 44.3906C161.968 45.25 162.71 45.6797 163.663 45.6797C164.421 45.6797 165.065 45.3594 165.597 44.7188C166.128 44.0703 166.394 43.1055 166.394 41.8242C166.394 40.3945 166.136 39.3672 165.62 38.7422C165.104 38.1094 164.444 37.793 163.64 37.793C162.858 37.793 162.202 38.1055 161.671 38.7305C161.147 39.3477 160.886 40.2734 160.886 41.5078ZM180.14 44.0391L183.421 44.5898C182.999 45.793 182.331 46.7109 181.417 47.3438C180.511 47.9688 179.374 48.2812 178.007 48.2812C175.843 48.2812 174.241 47.5742 173.202 46.1602C172.382 45.0273 171.972 43.5977 171.972 41.8711C171.972 39.8086 172.511 38.1953 173.589 37.0312C174.667 35.8594 176.03 35.2734 177.679 35.2734C179.53 35.2734 180.991 35.8867 182.062 37.1133C183.132 38.332 183.644 40.2031 183.597 42.7266H175.347C175.37 43.7031 175.636 44.4648 176.144 45.0117C176.651 45.5508 177.284 45.8203 178.042 45.8203C178.558 45.8203 178.991 45.6797 179.343 45.3984C179.694 45.1172 179.96 44.6641 180.14 44.0391ZM180.327 40.7109C180.304 39.7578 180.058 39.0352 179.589 38.543C179.12 38.043 178.55 37.793 177.878 37.793C177.159 37.793 176.565 38.0547 176.097 38.5781C175.628 39.1016 175.397 39.8125 175.405 40.7109H180.327ZM189.714 48L184.698 35.5547H188.155L190.499 41.9062L191.179 44.0273C191.358 43.4883 191.472 43.1328 191.519 42.9609C191.628 42.6094 191.745 42.2578 191.87 41.9062L194.237 35.5547H197.624L192.679 48H189.714ZM206.858 44.0391L210.14 44.5898C209.718 45.793 209.05 46.7109 208.136 47.3438C207.229 47.9688 206.093 48.2812 204.726 48.2812C202.562 48.2812 200.96 47.5742 199.921 46.1602C199.101 45.0273 198.69 43.5977 198.69 41.8711C198.69 39.8086 199.229 38.1953 200.308 37.0312C201.386 35.8594 202.749 35.2734 204.397 35.2734C206.249 35.2734 207.71 35.8867 208.78 37.1133C209.851 38.332 210.362 40.2031 210.315 42.7266H202.065C202.089 43.7031 202.354 44.4648 202.862 45.0117C203.37 45.5508 204.003 45.8203 204.761 45.8203C205.276 45.8203 205.71 45.6797 206.062 45.3984C206.413 45.1172 206.679 44.6641 206.858 44.0391ZM207.046 40.7109C207.022 39.7578 206.776 39.0352 206.308 38.543C205.839 38.043 205.269 37.793 204.597 37.793C203.878 37.793 203.284 38.0547 202.815 38.5781C202.347 39.1016 202.116 39.8125 202.124 40.7109H207.046ZM213.011 48V30.8203H216.304V48H213.011ZM218.929 41.6016C218.929 40.5078 219.198 39.4492 219.737 38.4258C220.276 37.4023 221.038 36.6211 222.022 36.082C223.015 35.543 224.12 35.2734 225.339 35.2734C227.222 35.2734 228.765 35.8867 229.968 37.1133C231.171 38.332 231.772 39.875 231.772 41.7422C231.772 43.625 231.163 45.1875 229.944 46.4297C228.733 47.6641 227.206 48.2812 225.362 48.2812C224.222 48.2812 223.132 48.0234 222.093 47.5078C221.062 46.9922 220.276 46.2383 219.737 45.2461C219.198 44.2461 218.929 43.0312 218.929 41.6016ZM222.304 41.7773C222.304 43.0117 222.597 43.957 223.183 44.6133C223.769 45.2695 224.491 45.5977 225.351 45.5977C226.21 45.5977 226.929 45.2695 227.507 44.6133C228.093 43.957 228.386 43.0039 228.386 41.7539C228.386 40.5352 228.093 39.5977 227.507 38.9414C226.929 38.2852 226.21 37.957 225.351 37.957C224.491 37.957 223.769 38.2852 223.183 38.9414C222.597 39.5977 222.304 40.543 222.304 41.7773ZM234.269 35.5547H237.339V37.3828C237.737 36.7578 238.276 36.25 238.956 35.8594C239.636 35.4688 240.39 35.2734 241.218 35.2734C242.663 35.2734 243.89 35.8398 244.897 36.9727C245.905 38.1055 246.409 39.6836 246.409 41.707C246.409 43.7852 245.901 45.4023 244.886 46.5586C243.87 47.707 242.64 48.2812 241.194 48.2812C240.507 48.2812 239.882 48.1445 239.319 47.8711C238.765 47.5977 238.179 47.1289 237.562 46.4648V52.7344H234.269V35.5547ZM237.526 41.5664C237.526 42.9648 237.804 44 238.358 44.6719C238.913 45.3359 239.589 45.668 240.386 45.668C241.151 45.668 241.788 45.3633 242.296 44.7539C242.804 44.1367 243.058 43.1289 243.058 41.7305C243.058 40.4258 242.796 39.457 242.272 38.8242C241.749 38.1914 241.101 37.875 240.327 37.875C239.522 37.875 238.854 38.1875 238.323 38.8125C237.792 39.4297 237.526 40.3477 237.526 41.5664ZM256.241 44.0391L259.522 44.5898C259.101 45.793 258.433 46.7109 257.519 47.3438C256.612 47.9688 255.476 48.2812 254.108 48.2812C251.944 48.2812 250.343 47.5742 249.304 46.1602C248.483 45.0273 248.073 43.5977 248.073 41.8711C248.073 39.8086 248.612 38.1953 249.69 37.0312C250.769 35.8594 252.132 35.2734 253.78 35.2734C255.632 35.2734 257.093 35.8867 258.163 37.1133C259.233 38.332 259.745 40.2031 259.698 42.7266H251.448C251.472 43.7031 251.737 44.4648 252.245 45.0117C252.753 45.5508 253.386 45.8203 254.144 45.8203C254.659 45.8203 255.093 45.6797 255.444 45.3984C255.796 45.1172 256.062 44.6641 256.241 44.0391ZM256.429 40.7109C256.405 39.7578 256.159 39.0352 255.69 38.543C255.222 38.043 254.651 37.793 253.979 37.793C253.261 37.793 252.667 38.0547 252.198 38.5781C251.729 39.1016 251.499 39.8125 251.507 40.7109H256.429ZM265.546 48H262.253V35.5547H265.312V37.3242C265.835 36.4883 266.304 35.9375 266.718 35.6719C267.14 35.4062 267.616 35.2734 268.147 35.2734C268.897 35.2734 269.62 35.4805 270.315 35.8945L269.296 38.7656C268.741 38.4062 268.226 38.2266 267.749 38.2266C267.288 38.2266 266.897 38.3555 266.577 38.6133C266.257 38.8633 266.003 39.3203 265.815 39.9844C265.636 40.6484 265.546 42.0391 265.546 44.1562V48ZM270.585 44.4492L273.89 43.9453C274.03 44.5859 274.315 45.0742 274.745 45.4102C275.175 45.7383 275.776 45.9023 276.55 45.9023C277.401 45.9023 278.042 45.7461 278.472 45.4336C278.761 45.2148 278.905 44.9219 278.905 44.5547C278.905 44.3047 278.827 44.0977 278.671 43.9336C278.507 43.7773 278.14 43.6328 277.569 43.5C274.913 42.9141 273.229 42.3789 272.519 41.8945C271.534 41.2227 271.042 40.2891 271.042 39.0938C271.042 38.0156 271.468 37.1094 272.319 36.375C273.171 35.6406 274.491 35.2734 276.28 35.2734C277.983 35.2734 279.249 35.5508 280.077 36.1055C280.905 36.6602 281.476 37.4805 281.788 38.5664L278.683 39.1406C278.55 38.6562 278.296 38.2852 277.921 38.0273C277.554 37.7695 277.026 37.6406 276.339 37.6406C275.472 37.6406 274.851 37.7617 274.476 38.0039C274.226 38.1758 274.101 38.3984 274.101 38.6719C274.101 38.9062 274.21 39.1055 274.429 39.2695C274.726 39.4883 275.749 39.7969 277.499 40.1953C279.257 40.5938 280.483 41.082 281.179 41.6602C281.866 42.2461 282.21 43.0625 282.21 44.1094C282.21 45.25 281.733 46.2305 280.78 47.0508C279.827 47.8711 278.417 48.2812 276.55 48.2812C274.854 48.2812 273.511 47.9375 272.519 47.25C271.534 46.5625 270.89 45.6289 270.585 44.4492Z" />
+      </svg>
+    </a>
+  
+  </div>
+
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+          <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-swift-devportal-9-main-menu-menu" id="block-swift-devportal-9-main-menu">
+            <h2 class="sr-only" id="block-swift-devportal-9-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                                        <a href="/apis" data-drupal-link-system-path="apis">APIs</a>
+              </li>
+                      <li class="active active-trail">
+                                                        <a href="/reference" class="active-trail is-active" data-drupal-link-system-path="reference">Reference</a>
+              </li>
+                      <li>
+                                                        <a href="/partners" data-drupal-link-system-path="node/6676">Partners</a>
+              </li>
+                      <li>
+                                                        <a href="/support" data-drupal-link-system-path="node/386">Support</a>
+              </li>
+                      <li class="last">
+                                                        <a href="/about" data-drupal-link-system-path="node/5401">About</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-swift-devportal-9-account-menu-menu" id="block-swift-devportal-9-account-menu">
+            <h2 class="sr-only" id="block-swift-devportal-9-account-menu-menu">User account menu</h2>
+
+                                            <a class="signin-button " href="/signin?destination=/reference">Sign In</a>
+          <div id="showLoader" style="display:none; z-index:99999; position:fixed; top:0; left:0; height:100%; bottom:0; right:0; background:rgba(255,255,255,0.8); text-align:center;">
+  <div class="loader" style="transform:translate(-45%,-50%); top:50%; left:50%; position:absolute;">
+    <div>
+      <div style="text-align: center;">
+        <div style="font-size: 18px; color: #970254;">Loading ...</div>
+        <svg class="sc-8xfcsx-0 kWmmEQ loader_rotation" version="1.1" width="100" height="100" viewBox="0 0 512 512">
+          <path d="M275.682 147.999c0 10.864-8.837 19.661-19.682 19.661v0c-10.875 0-19.681-8.796-19.681-19.661v-96.635c0-10.885 8.806-19.661 19.681-19.661v0c10.844 0 19.682 8.776 19.682 19.661v96.635z"></path><path d="M275.682 460.615c0 10.865-8.837 19.682-19.682 19.682v0c-10.875 0-19.681-8.817-19.681-19.682v-96.604c0-10.885 8.806-19.681 19.681-19.681v0c10.844 0 19.682 8.796 19.682 19.682v96.604z"></path><path d="M147.978 236.339c10.885 0 19.681 8.755 19.681 19.641v0c0 10.885-8.796 19.702-19.681 19.702h-96.624c-10.864 0-19.661-8.817-19.661-19.702v0c0-10.885 8.796-19.641 19.661-19.641h96.624z"></path><path d="M460.615 236.339c10.865 0 19.682 8.755 19.682 19.641v0c0 10.885-8.817 19.702-19.682 19.702h-96.584c-10.885 0-19.722-8.817-19.722-19.702v0c0-10.885 8.837-19.641 19.722-19.641h96.584z"></path><path d="M193.546 165.703c7.69 7.66 7.68 20.142 0 27.822v0c-7.701 7.701-20.162 7.701-27.853 0.020l-68.311-68.322c-7.68-7.701-7.68-20.142 0-27.863v0c7.68-7.68 20.121-7.68 27.822 0l68.342 68.342z"></path><path d="M414.597 386.775c7.7 7.68 7.7 20.163 0.021 27.863v0c-7.7 7.659-20.142 7.659-27.843-0.062l-68.311-68.26c-7.68-7.7-7.68-20.204 0-27.863v0c7.68-7.7 20.163-7.7 27.842 0l68.291 68.322z"></path><path d="M165.694 318.464c7.69-7.7 20.153-7.7 27.853 0v0c7.68 7.659 7.69 20.163 0 27.863l-68.342 68.322c-7.67 7.659-20.142 7.659-27.822-0.062v0c-7.68-7.68-7.68-20.122 0-27.801l68.311-68.322z"></path><path d="M386.775 97.362c7.7-7.68 20.142-7.68 27.822 0v0c7.7 7.68 7.7 20.183 0.021 27.863l-68.322 68.311c-7.68 7.68-20.163 7.68-27.843-0.020v0c-7.68-7.68-7.68-20.162 0-27.822l68.322-68.332z">
+          </path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+  </nav>
+
+
+
+
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-swift-devportal-9-search-form-narrow" role="search">
+  
+    
+      <div class="header-search-btn">
+          <svg class="svg-icon-search" width="20px" height="20px" viewBox="0 0 512 512" aria-hidden="true" data-prefix="fal" data-icon="search" xmlns="http://www.w3.org/2000/svg">
+      <path class="svg-icon-search__path" d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"></path>
+     </svg>
+    </div>
+    <div class="expanded-search">
+      
+<div class="add_my_app_options">
+  <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+    <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">
+        <div class="label-new">Search
+    </div>
+    </label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary fa-light fa-magnifying-glass icon-only"><span class="sr-only">Search</span><svg class="svg-icon-search" width="20px" height="20px" viewBox="0 0 512 512" aria-hidden="true" data-prefix="fal" data-icon="search" xmlns="http://www.w3.org/2000/svg"><path class="svg-icon-search__path" d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"></path></svg></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+  
+  </form>
+</div>
+
+      <button type="button" class="close-modal-button">×</button>
+    </div>
+  </div>
+
+
+  </div>
+
+        </div>
+                </header>
+  
+    <div role="main" class="container-fluid newui main-container js-quickedit-main-content  ">
+  
+        <div  class="row">
+                                            <div class="col-sm-12" role="heading">
+                  <div class="region region-header">
+    <div data-drupal-messages-fallback class="hidden"></div>
+  
+
+  </div>
+
+              </div>
+                          
+            
+                  <section class="col-sm-12">
+
+                                      <div class="highlighted"></div>
+                  
+                
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <div class="form-item js-form-item form-type-item js-form-type-item form-item- js-form-item- form-no-label form-group">
+  
+  
+  <div id="wrapper" class="clearfix">
+<div class="page-reference">
+  <div id="MainMenu" class="col-md-2">
+
+    <div class="buttonCont btn_ref_lft_nav_hid" style="width:100%;position:relative;top:0px;right:0;display:inline-block;">
+      <h3 id="reference-h3-tag" class="pull-left ref_page_lft_nav_ttl">Reference</h3>
+      <button id="menu-toggle" class="btn btn-secondary pull-right" style="margin-right: -6px;transform: rotate(90deg);top: 0px;">
+        <i id="showhide" class="fa-angle-double-down fas"></i>
+      </button>
+    </div>
+    <div
+      id="main-menu-inner" class="list-group">
+      <!-- Changes to the left side menu -->
+
+      <a href="#introduction" class="list-group-item list-group-item-success" data-parent="#MainMenu">
+        <strong>Introduction</strong>
+      </a>
+      <a href="#gsg" class="list-group-item list-group-item-success" data-parent="#MainMenu">
+        <strong>Getting Started</strong>
+      </a>
+      <span class="divider"></span>
+      <a href="#sdk" class="list-group-item list-group-item-success" data-parent="#MainMenu">
+        <strong>SDK</strong>
+      </a>
+      <a href="#microgateway" class="list-group-item list-group-item-success" data-parent="#MainMenu">
+        <strong>Microgateway</strong>
+      </a>
+      <span class="divider"></span>
+      <a href="#gpitracker" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>GPI</strong>
+      </a>
+      <div class="collapse" id="gpitracker">
+        <a href="#gpi-overview" class="list-group-item">Overview</a>
+        <a href="#gpi" id="messaging-tracker-api1" data-id="Tracker Reference" class="list-group-item api-item">GPI API (v4)</a>
+        <a href="#gcct" id="messaging-tracker-gcct1" data-id="gCCT Reference" class="list-group-item api-item">GPI Customer Credit Transfer API</a>
+        <a href="#pmiapi" id="messaging-tracker-pmiapi1" data-id="PMI API Reference" class="list-group-item api-item">PMI API</a>
+        <a href="#gcov" id="messaging-tracker-gcov1" data-id="gCOV Reference" class="list-group-item api-item">GPI Cover Payments API</a>
+        <a href="#gfit" id="messaging-tracker-gfit1" data-id="gFIT Reference" class="list-group-item api-item">GPI Financial Institutions Transfer API</a>
+        <a href="#transaction-details" id="messaging-tracker-get1" data-id="gpi Transaction Details Reference" class="list-group-item api-item">Transaction Details API</a>
+        <a href="#gsrp" id="messaging-tracker-gsrp1" data-id="Stop and Recall API Reference" class="list-group-item api-item">Stop and Recall API</a>
+        <a href="#swiftgo" id="messaging-tracker-slvp1" data-id="SLVP Reference" class="list-group-item api-item">Swift Go API</a>
+        <a href="#g4c" id="messaging-tracker-gc1" data-id="Tracker g4c Reference" class="list-group-item api-item">GPI for Corporates API</a>
+        <a href="#gcase" id="messaging-tracker-gcase1" data-id="gCase Reference" class="list-group-item api-item">Case Resolution API</a>
+        <a href="#universal-confirmations" id="messaging-tracker-uc1" data-id="Universal Confirmations Reference" class="list-group-item api-item">Universal Confirmations API</a>
+
+      </div>
+      <a href="#pre-validation" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Pre-Validation</strong>
+      </a>
+      <div class="collapse" id="pre-validation">
+        <a href="#pre-validation-overview" id="pre-validation-overview1" class="list-group-item">Overview</a>
+        <a href="#payment-pre-validation-api" id="messaging-tracker-ipreval1" data-id="Payment Pre-validation Reference" class="list-group-item api-item">Payment Pre-validation Consumer API</a>
+        <a href="#payment-pre-validation-data-provider-api" id="messaging-tracker-opreval1" data-id="Pre-validation Data Provider Reference" class="list-group-item api-item">Payment Pre-validation Data Provider API</a>
+      </div>
+      <a href="#securitiesSettlementViewID" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Securities</strong>
+      </a>
+      <div class="collapse" id="securitiesSettlementViewID">
+          <a href="#securitiesSettlementView" id="securitiesSettlementView1" data-id="Securities Settlement View" class="list-group-item api-item">Securities View API</a>
+      </div>
+      <a href="#case-manager" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Case Manager</strong>
+      </a>
+      <div class="collapse" id="case-manager">
+        <a href="#claim-non-receipt-api" id="claim-non-receip-api1" data-id="Claim Non Receipt Reference" class="list-group-item api-item">Claim Non Receipt API</a>
+        <a href="#investigation-action-api" id="investigation-action-api1" data-id="Investigation Action Reference" class="list-group-item api-item">Investigation Action API</a>
+        <a href="#unable-to-apply-api" id="unable-to-apply-api1" data-id="Unable To Apply Reference" class="list-group-item api-item">Unable To Apply API</a>
+        <a href="#request-for-information-api" id="request-for-information-api1" data-id="Request For Information Reference" class="list-group-item api-item">Request For Information API</a>
+      </div>
+      <a href="#compliance1" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Compliance</strong>
+      </a>
+      <div class="collapse" id="compliance1">
+        <a href="#compliance-overview" id="compliance-overview1" class="list-group-item">Overview</a>
+        <a href="#kyc-registry" id="compliance-kyc1" data-id="KYC Reference" class="list-group-item api-item">Swift KYC Registry API</a>
+        <a href="#transaction-screening" id="compliance-tss1" data-id="Transaction Screening Reference" class="list-group-item api-item">Transaction Screening API</a>
+        <a href="#compliance-analytics" id="compliance-analytics1" data-id="Compliance Analytics API Reference" class="list-group-item api-item">Compliance Analytics API</a>
+      </div>
+      <a href="#refdata" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>RefData</strong>
+      </a>
+      <div class="collapse" id="refdata">
+        <a href="#refdata-overview" id="refdata-overview1" class="list-group-item">Overview</a>
+        <a href="#swiftref" id="compliance-swifref1" data-id="SWIFTRef Reference" class="list-group-item api-item">SwiftRef API</a>
+      </div>
+      <a href="#relationship-management" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Relationship Management</strong>
+      </a>
+      <div class="collapse" id="relationship-management">
+        <a href="#rma-api" id="relationship-management1" data-id="RMA API Reference" class="list-group-item api-item">RMA API</a>
+      </div>
+      <a href="#business-intelligence" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Business Intelligence</strong>
+      </a>
+      <div class="collapse" id="business-intelligence">
+        <a href="#business-intelligence-overview" id="banking-api" class="list-group-item">Overview</a>
+        <a href="#banking-analytics-premium" id="banking-analytics-premium1" data-id="Banking Analytics Premium API Reference" class="list-group-item api-item">Banking Analytics Premium API</a>
+        <a href="#observer-analytics" id="observer-analytics1" data-id="Observer Analytics API Reference" class="list-group-item api-item">Observer Analytics API</a>
+
+      </div>
+      <a href="#notification-service" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Notification Service</strong>
+      </a>
+      <div class="collapse" id="notification-service">
+        <a href="#notification" id="notification-service1" data-id="Notification API Reference" class="list-group-item api-item">Notification API</a>
+      </div>
+      <a href="#tradingfinance-service" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Trade Finance</strong>
+      </a>
+      <div class="collapse" id="tradingfinance-service">
+        <a href="#tradingfinance" id="tradingfinance-service1" data-id="Trade Finance Validation Service" class="list-group-item api-item">Trade Finance Validation Service</a>
+        <a href="#bank-guarantee" id="bank-guarantee1" data-id="Bank Guarantee Reference" class="list-group-item api-item">Bank Guarantee API</a>
+        <a href="#bank-guarantee-notification" id="bank-guarantee-notification1" data-id="Bank Guarantee Notification Reference" class="list-group-item api-item">Bank Guarantee Notification API</a>
+
+      </div>
+
+            <a href="#connectivity" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Connectivity</strong>
+      </a>
+      <div class="collapse" id="connectivity">
+        <a href="#swift-messaging" id="notification-service1" data-id="Swift messaging API" class="list-group-item api-item">Swift messaging API</a>
+
+      </div>
+      <a href="#eba-api" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>EBA API</strong>
+      </a>
+      <div class="collapse" id="eba-api">
+        <a href="#eba-overview" id="ebaid" class="list-group-item">Overview</a>
+        <a href="#step2-cgs" id="cgiid" data-id="STEP2 Continuous Gross Settlement" class="list-group-item api-item">STEP2 Continuous Gross Settlement</a>
+        <a href="#step2-sdd-b2b" id="b2bid" data-id="B2B Direct Debit api" class="list-group-item api-item">STEP2 SEPA Direct Debit B2B</a>
+        <a href="#step2-sdd-core" id="cordirid" data-id="Core Direct Debit API" class="list-group-item api-item">STEP2 SEPA Direct Debit CORE</a>
+        <a href="#step2-sct" id="sepaid" data-id="SEPA Credit Transfer API" class="list-group-item api-item">STEP2 SEPA Credit Transfer</a>
+        <a href="#rt1-sct-inst" id="RT1id" data-id="RT1 SEPA Credit Transfer Inst" class="list-group-item api-item">RT1 SEPA Credit Transfer Inst</a>
+      </div>
+      <a href="#instant-treasury" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Instant Treasury</strong>
+      </a>
+      <div class="collapse" id="instant-treasury">
+        <a href="#paymentinitiation" id="payment-init1" data-id="Payment Initiation Reference" class="list-group-item api-item">Payment Initiation API</a>
+        <a href="#instant-cash-reporting" id="instant-cash1" data-id="Instant Cash Reporting Reference" class="list-group-item api-item">Instant Cash Reporting API</a>
+      </div>
+      <a href="#boe-api" class="list-group-item list-group-item-success collapsed" data-toggle="collapse" data-parent="#MainMenu">
+        <strong>Bank of England RTGS</strong>
+      </a>
+      <div class="collapse" id="boe-api">
+        <a href="#boe-overview" id="boeid" class="list-group-item">Overview</a>
+        <a href="#boe-accounts" id="boetestid" data-id="Accounts API" class="list-group-item api-item">Accounts API</a>
+        <a href="#boe-settlement" id="boetestid" data-id="Settlement Liquidity Groups API" class="list-group-item api-item">Settlement Liquidity Groups API</a>
+        <a href="#boe-notifications" id="boetestid" data-id="Notifications API" class="list-group-item api-item">Notifications API</a>
+        <a href="#boe-reconciliation-responses" id="boetestid" data-id="Reconciliation Responses API" class="list-group-item api-item">Reconciliation Responses API</a>
+        <a href="#boe-participants" id="boetestid" data-id="Participants API" class="list-group-item api-item">Participants API</a>
+        <a href="#boe-chaps-payments" id="boetestid" data-id="CHAPS Payments Controls API" class="list-group-item api-item">CHAPS Payments Controls API</a>
+        <a href="#boe-transactions" id="boetestid" data-id="Transactions API" class="list-group-item api-item">Transactions API</a>
+        <a href="#boe-full-payment" id="boetestid" data-id="Full Payment Message API" class="list-group-item api-item">Full Payment Message API</a>
+        <a href="#boe-rtgs" id="boetestid" data-id="Raw Payment Message API" class="list-group-item api-item">Raw Payment Messages API</a>
+        <a href="#boe-tasks" id="boetestid" data-id="Tasks API" class="list-group-item api-item">Tasks API</a>
+        <a href="#boe-filter" id="boetestid" data-id="Filter Values API" class="list-group-item api-item">Filter Values API</a>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+    <!-- /#page-content-wrapper to the right side content -->
+    <div class="col-md-10 reference-content">
+
+        <div id="introduction"  style="margin-bottom: 5rem">
+            <h3>Introduction</h3>
+            <!--<p>Welcome to "Swift developers"! Get familiar with the Swift APIs and explore their features.</p>-->
+            <span class="divider"></span>
+            <p>Welcome! This reference page lists our APIs and the detailed documentations pertained to each. Our APIs implement REST with standard HTTP codes, verbs and authentication methods and they are documented using the <a href="http://spec.openapis.org/oas/v3.0.3" target="_blank">OpenAPI 3.0 <i class="fas fa-external-link-alt"></i></a> standard. Read on to get more information about our API guidelines!</p>
+            <h5>&nbsp;</h5>
+            <div id="authentication">
+                <h4>Authentication</h4>
+                <!--<span class="divider"></span>-->
+                <p>OAuth 2.0  is an industry standard used to protect access to APIs. <a href="/swift-oauth-token-api" style="color: #970254">Swift OAuth Token API</a> is used to issue tokens needed to access other Swift API products. Depending on the API product you are trying to access, you will be using one of the two types of OAuth, <i><b>Password Grant Type</b></i> or <i><b>JWT Bearer Token Grant Type</b></i>.
+                Check the <i>securitySchemes</i> defined in the <i>OpenAPI</i> specification to find out which grant type and credential you should use for the API you want to consume.<p>
+            </div>
+            <div id="versions">
+                <h4>Versions</h4>
+                <!--<p>Description text of section</p>-->
+                <!--<span class="divider"></span>-->
+                <p>Swift uses semantic versioning for our APIs. We will bump up the MAJOR version when a "breaking change" is made to the API, MINOR version number will be incremented when a functional "non-breaking change" is made to the API and "PATCH" version number will be incremented when a bug fix "non-breaking change" is made to the API.</p>
+                <p>We adopted the URI versioning approach where MAJOR version number is expected to be in the URL.</p>
+            </div>
+            <div id="errors">
+                <h4>Errors</h4>
+                <!--<p>Description text of section</p>-->
+                <!--<span class="divider"></span>-->
+                <p>Swift uses industry best practices to handle errors. You can expect three outcomes when interacting with our APIs. HTTP status code <code>2XX</code> indicates success, <code>4XX</code> indicates an error due to information provided by the client application, <code>5XX</code> indicates an error with the server.</p>
+            </div>
+            <div id="pagination" style="margin-bottom: 0px">
+                <h4>Pagination</h4>
+                <!--<p>Description text of section</p>-->
+                <!--<span class="divider"></span>-->
+                <p>When making an API call to a resource like <a href="/content/gpi-v4-reference#tag/Get-Changed-Payment-Transactions" target="_blank">/payments/changed/transactions</a>, the number of results returned can be very large. To make results easier to handle and to reduce latency and the amount of bandwidth consumed, results are paginated. </p>
+                <p>There are two pagination behaviors supported by Swift APIs. GPI APIs support <code>maximum_number</code> and <code>next</code> query parameters. If there are more resource objects to be fetched than permitted by <code>maximum_number</code>, a <code>next</code> token is returned to fetch the next set of resource objects. Other Swift APIs support <code>limit</code> and <code>offset</code> query parameters. If there are more resource objects to be fetched than permitted by <code>limit</code>, a <code>next</code> key is returned whose value is a subpath to be used in the subsequent request. Additional keys are also returned such as <code>self</code>, <code>previous</code>, <code>first</code>, <code>last</code> and <code>pageof</code>.</p>
+            </div>
+            <p>Now you have everything you need to know about our API guidelines, be sure to check out the next section <a href="/reference#gsg">Getting Started</a> with a step-by-step guide on how to kick off your Swift API journey!</p>
+        </div>
+        <div id="gsg" style="margin-bottom: 5rem">
+            <h3>Getting Started</h3>
+            <!--<p>Description text of section</p>-->
+            <span class="divider"></span>
+            <p>For information on getting started with RTGS APIs from the Bank Of England, please follow the link <a href="/getting-started-rtgs-apis">here</a>. </p>
+            <p>Please note that the RTGS API guide requires additional permissions.<a href="/contact-us">Contact Us</a> to request access.</p>
+            <h4>Step 1: Browse our APIs</h4>
+            <p>Swift offers a range of API products that help remove the friction from global transactions. You can find the APIs in the <a href="/api">API Catalogue</a> and a number of API use cases in the <a href="/playground">API Playground</a> to help you find the APIs that best suit your needs.</p>
+            <h4>Step 2: Create your App</h4>
+            <p>Creating your own application allows you to generate a set of credentials to access the API products in the sandbox and production environments.</p>
+            <ul style="font-size:14px; color:#7a6e67;">
+               <li><a href="/signin">Create an account</a><p>If you have an account on Swift.com, you can use it to sign in directly.</p></li>
+               <li><a href="/myapps">Create an App</a><p>We recommend one API product per App.</p></li>
+            </ul>
+            <p>You are responsible for securing your credentials on your premises and within your client applications. Application credentials are exchanged via the <b>Basic Authentication Scheme</b> in the Authorization Header. You will find more information in the <a href="/swift-oauth-token-api">Swift OAuth Token API</a> page.</p>
+            <p>Once you create an App, its status will be set to “Sandbox” and its credentials can be used to access API products in the sandbox environment. You can promote your application to the production environments when you are ready.</p>
+            <h4>Step 3: Making calls to APIs in the Sandbox</h4>
+            <p>You can try all API products in the freely accessible sandbox environment using the application credentials from the app you created and the sandbox credentials that are provided to you below. Sandbox APIs implement the same OpenAPI specifications used for Live APIs to ensure a similar integration experience. Please note that, for the moment, not all sandbox APIs cover the full set of test scenarios.</p>
+            <p>When generating an OAuth token to access the sandbox APIs, use the following sandbox credentials:</p>
+            <ul style="font-size:14px; color:#7a6e67;">
+            <li><p>Sandbox License ID: <code>sandbox-id</code></p></li>
+            <li><p>Sandbox License Secret: <code>sandbox-key</code></p></li>
+            <li><p>Sandbox Self-signed Certificate: <a href="https://github.com/swiftinc/gpi-v4-demo/raw/master/config/demo.jks">demo.jks <i class="fas fa-download"></i></a></p></li>
+            </ul>
+            <p>Find more information on how to use these credentials to generate an OAuth token in the <a href="/swift-oauth-token-api">Swift OAuth Token API</a> page.</p>
+            <p>To help you get started quickly, check out the <a href="https://youtube.com/playlist?list=PLxk7trWspNzS4Oyg1qzjmUq_xGwIgIFDO">tutorial videos</a> and <a href="/getting-started-with-Swift-API-Postman-Collection">postman collections</a> that are embedded with sandbox URL, authentication, API requests and postman tests to help you test with the scenarios covered in the sandbox environment. You can download the postman collection via the <b>Run in Postman</b> button.</p>
+
+
+
+            <h4>Step 4: Promote your App to live!</h4>
+            <p>When you’re ready to use the APIs in the production environment, you can promote your App from the Swift Developer Portal. </p>
+            <p>Sign in with the option <a href="/saml/login">Sign in with swift.com</a> and go to <a href="/myapps">My Apps</a>.</p>
+            <ul style="font-size:14px; color:#7a6e67;">
+                   <li><p>Select the App you want to promote</p></li>
+                   <li><p>Click <b>Promote App</b></p></li>
+                   <li><p>Verify information in the pop up window</p></li>
+                   <li><p>To confirm, click <b>Promote</b></p></li>
+            </ul>
+            <p>After the promotion request is submitted, it takes on average 2 days for some API products to be promoted. You can check the status of the request under <a href="/myapps">My Apps</a>.
+        </div>
+
+        <div id="sdk" style="margin-bottom: 5rem">
+            <h3>SDK</h3>
+            <!--<p>Description text of section</p>-->
+            <span class="divider"></span>
+            <p>Build your application with <a href="/swift-sdk">Swift SDK</a> to make coding easier. Swift SDK takes care of the lower-level plumbing including authentication, authorization, signing and error handling. In addition, it provides a number of value-added services such as schema validation, monitoring, end-to-end testing and ready to use API use cases. Swift SDK currently supports APIs for accessing customer credit transfer, instant payments, stop and recall, case resolution, cover payments, financial institution transfer, GPI for Corporates, pay and trace, inbound payments, pre-validation, KYC Registry, SWIFTRef, SWIFTRef Automated Download, Banking Analytics and Compliance Analytics services.</p>
+        </div>
+        <div id="microgateway" style="margin-bottom: 5rem">
+            <h3>Microgateway</h3>
+            <!--<p>Description text of section</p>-->
+            <span class="divider"></span>
+            <p>Use <a href="/swift-microgateway">Swift Microgateway</a> to benefit from the full range of API-based services available on Swift. Swift Microgateway is a software product that allows firms to configure, manage, and monitor all API calls they make on the platform. In the future, the Microgateway will enable you to expose your own APIs on Swift, allowing you to offer your services to our unique community of more than 11,000 financial institutions located in over 200 countries.</p>
+        </div>
+
+
+        <!--<div id="sandbox">
+            <h3>Sandbox</h3>
+            <span class="divider"></span>
+            <div id="sandbox-overview">
+                <h4>Overview</h4>
+                <p>You can try out any Swift APIs in a harmless and effortless sandbox environment with the sandbox URL: <code>https://sandbox.swift.com</code>. Additionally, we provide a postman collection to help you explore the use cases covered in the sandbox environment, more details in the <a href="/getting-started-with-Swift-API-Postman-Collection">getting started guide with postman collection</a>.</p>
+            </div>
+
+            <div id="sandbox-getting-started">
+                <h4>Getting Started</h4>
+                <p>Create your client application under <a href="/myapps">My Apps</a>. We recommend one API product per app. After the app is created, you will find a unique pair of credentials, <code>consumer-key</code> as client identifier and <code>consumer-secret</code> as shared secret. You are responsible for securing the credentials i.e. at your premises and also within your client applications. The status of the client application shows the environment where the credentials are valid. The default status is <em>Sandbox</em>.</p>
+            </div>
+        </div>-->
+        <div id="gpi-overview" style="margin-bottom: 5rem">
+            <h3>Swift GPI</h3>
+            <!--<p>Description of messaging APIs</p>-->
+            <span class="divider"></span>
+            <h4>Overview</h4>
+            <p>APIs in this category are offered via the Swift multi-vendor secure IP network (MV-SIPN). Access to highly confidential GPI data requires API client to estabilish a secure session with the API service via the following options: <a href="/swift-sdk">Swift SDK</a> and <a href="/swift-microgateway">Swift Microgateway</a> for API v4 or higher.</p>
+            <p><i class="fas fa-exclamation-circle"></i> Find more information in <a href="/api/gpi/versioning">GPI API release policy and versioning</a>.</p>
+            <div id="gpi">
+                <h4>GPI API (v4)</h4>
+                <button id="loadData" class="loadData"  data-id="Tracker Reference" data-identifier="messaging-tracker">View OpenAPI specification</button>
+                <p>This set of APIs provide operations for financial institutions to access and update payment transaction information.</p>
+
+            <div class="authenticated hidden"><p>Download the specification in <a href="/system/files/gpi_api_spec_oas3.zip">OAS 3.0</a> format.</p> <p>Download the <a href="/system/files/gpi_api_detailed_specifications.zip">Detailed Specification</a> to learn more.</p> <p>Download the <a href="/system/files/gpi_api_schemas.zip">Schemas</a> to validate API requests and responses.</p> <p>Visit the <a href="https://www2.swift.com/knowledgecentre/publications/gpi_ops/?topic=ref_696903039.htm">Tracker Errors Guide</a> to check for error codes descriptions.</p>
+            </div>
+            <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#gpi">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+            </div>
+            
+            <p>Try the APIs in the sandbox with Postman or clone the <a href="https://github.com/swiftinc/gpi-v4-demo" target="_blank"><i class="fab fa-github"></i> GPI v4 demo app</a>.</p>
+            <div class="postman-run-button"
+                data-postman-action="collection/fork"
+                data-postman-var-1="25313102-548ec274-8b9f-4f21-a630-01c30e3919f8"
+                data-postman-collection-url="entityId=25313102-548ec274-8b9f-4f21-a630-01c30e3919f8&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                <script type="text/javascript">
+                  (function (p,o,s,t,m,a,n) {
+                    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                      (n = o.createElement("script")),
+                      (n.id = s+t), (n.async = 1), (n.src = m), n
+                    ));
+                  }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorema Ipsum.</p>-->
+                <div class="messaging-tracker dataloader"></div>
+            </div>
+            <div id="gcct">
+                <h4>GPI Customer Credit Transfer API</h4>
+                <button id="loadData" class="loadData"  data-id="gCCT Reference" data-identifier="messaging-tracker-gcct">View OpenAPI specification</button>
+                <p>This API is a status confirmation update to inform the Tracker about the updated status of a given customer credit transfer payment.</p>
+
+
+                  <div class="authenticated hidden"><p>Download the <a href="/sites/default/files/2024-03/gCCTPaymentStatusRequest.zip">Detailed Specification</a> to learn more.</p>
+                  </div>
+                  <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#gcct">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+                </div>
+
+                                <p>Try the APIs in the sandbox with Postman or clone the <a href="https://github.com/swiftinc/gpi-v5-demo-app" target="_blank"><i class="fab fa-github"></i> GPI v5 demo app</a>.</p>
+
+                <div class="postman-run-button"
+                  data-postman-action="collection/fork"
+                  data-postman-var-1="25313102-f8b9769a-6157-4992-b3e4-542f54d06522"
+                  data-postman-collection-url="entityId=25313102-f8b9769a-6157-4992-b3e4-542f54d06522&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                    <script type="text/javascript">
+                      (function (p,o,s,t,m,a,n) {
+                        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                          (n = o.createElement("script")),
+                          (n.id = s+t), (n.async = 1), (n.src = m), n
+                        ));
+                      }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                    </script>
+
+             <span class="divider"></span>
+                <div class="messaging-tracker-gcct dataloader"></div>
+                </div>
+            <div id="pmiapi">
+                <h4>PMI API</h4>
+                <button id="loadData" class="loadData"  data-id="PMI API Reference" data-identifier="messaging-tracker-pmiapi">View OpenAPI specification</button>
+                <p>This API is a status confirmation update to inform the Tracker about the updated status of a given customer credit transfer payment.</p>
+
+
+
+                  <div class="authenticated hidden"><p>Download the <a href="/system/files/2024-04/PMIPaymentStatusRequest.pdf">Detailed Specification</a> to learn more.</p>
+                  </div>
+                <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#pmiapi">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+                </div>
+
+
+                
+                <div class="postman-run-button"
+                  data-postman-action="collection/fork"
+                  data-postman-var-1="25313102-a7bfba9a-28ea-4b8b-9a82-69381866539b"
+                  data-postman-collection-url="entityId=25313102-a7bfba9a-28ea-4b8b-9a82-69381866539b&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                    <script type="text/javascript">
+                      (function (p,o,s,t,m,a,n) {
+                        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                          (n = o.createElement("script")),
+                          (n.id = s+t), (n.async = 1), (n.src = m), n
+                        ));
+                      }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                    </script>
+
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                <div class="messaging-tracker-pmiapi dataloader"></div>
+            </div>
+
+            <div id="gcov">
+                <h4>GPI Cover Payments API</h4>
+                <button id="loadData" class="loadData"  data-id="gCOV Reference" data-identifier="messaging-tracker-gcov">View OpenAPI specification</button>
+                <p>This API is a status confirmation update to inform the Tracker about the updated status of a given gCOV payment.</p>
+
+
+                <div class="authenticated hidden"><p>Download the <a href="/sites/default/files/2024-03/gCOVPaymentStatusRequest.zip">Detailed Specification</a> to learn more.</p>
+                </div>
+                  <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#gcov">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+                </div>
+                <p>Try the APIs in the sandbox with Postman or clone the <a href="https://github.com/swiftinc/gpi-v5-demo-app" target="_blank"><i class="fab fa-github"></i> GPI v5 demo app</a>.</p>
+
+                
+                <div class="postman-run-button"
+                  data-postman-action="collection/fork"
+                  data-postman-var-1="25313102-38c38c40-e5a7-4853-84a2-bf04c10329f3"
+                  data-postman-collection-url="entityId=25313102-38c38c40-e5a7-4853-84a2-bf04c10329f3&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                  <script type="text/javascript">
+                    (function (p,o,s,t,m,a,n) {
+                      !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                      !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                        (n = o.createElement("script")),
+                        (n.id = s+t), (n.async = 1), (n.src = m), n
+                        ));
+                      }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                <div class="messaging-tracker-gcov dataloader"></div>
+            </div>
+            <div id="gfit">
+                <h4>GPI Financial Institutions Transfer API</h4>
+                <button id="loadData" class="loadData"  data-id="gFIT Reference" data-identifier="messaging-tracker-gfit">View OpenAPI specification</button>
+                <p>This API is a status confirmation update to inform the Tracker about the updated status of a given gFIT payment.</p>
+
+
+                  <div class="authenticated hidden"><p>Download the <a href="/sites/default/files/2024-03/gFITPaymentStatusRequest.zip">Detailed Specification</a> to learn more.</p>
+                </div>
+                  <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#gfit">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+                </div>
+                <p>Try the APIs in the sandbox with Postman or clone the <a href="https://github.com/swiftinc/gpi-v5-demo-app" target="_blank"><i class="fab fa-github"></i> GPI v5 demo app</a>.</p>
+
+                
+            <div class="postman-run-button"
+              data-postman-action="collection/fork"
+              data-postman-var-1="25313102-0563224f-9b6b-47ec-a21c-3ed475e85a87"
+              data-postman-collection-url="entityId=25313102-0563224f-9b6b-47ec-a21c-3ed475e85a87&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                <script type="text/javascript">
+                  (function (p,o,s,t,m,a,n) {
+                    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                      (n = o.createElement("script")),
+                      (n.id = s+t), (n.async = 1), (n.src = m), n
+                    ));
+                  }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                <div class="messaging-tracker-gfit dataloader"></div>
+            </div>
+
+            <div id="transaction-details">
+                <h4>Transaction Details API</h4>
+                <button id="loadData" class="loadData"  data-id="gpi Transaction Details Reference" data-identifier="messaging-tracker-get">View OpenAPI specification</button>
+                <p>This set of APIs retrieve the status of one or more payment transactions.</p>
+
+
+                <div class="authenticated hidden"><p>Download the <a href="/system/files/2024-08/v6_TransactionDetails.zip">Detailed Specification</a> to learn more.</p>
+                </div>
+                  <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#transaction-details">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+                </div>
+                <p>Try the APIs in the sandbox with Postman or clone the <a href="https://github.com/swiftinc/gpi-v5-demo-app" target="_blank"><i class="fab fa-github"></i> GPI v5 demo app</a>.</p>
+
+                
+                <div class="postman-run-button"
+                  data-postman-action="collection/fork"
+                  data-postman-var-1="25313102-399c9fec-8fbb-4334-b8e9-46f4ac79e24c"
+                  data-postman-collection-url="entityId=25313102-399c9fec-8fbb-4334-b8e9-46f4ac79e24c&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                  <script type="text/javascript">
+                    (function (p,o,s,t,m,a,n) {
+                      !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                      !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                        (n = o.createElement("script")),
+                        (n.id = s+t), (n.async = 1), (n.src = m), n
+                        ));
+                      }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+
+                <p>Check the <a href="https://www2.swift.com/knowledgecentre/kb_articles/6000177?protected=true&reload-date=1721410599444" target="_blank">KB tip</a> before testing in Pilot environment.</p>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                <div class="messaging-tracker-get dataloader"></div>
+            </div>
+
+            <div id="gsrp">
+                <h4>Stop and Recall API</h4>
+                <button id="loadData" class="loadData"  data-id="Stop and Recall Reference" data-identifier="messaging-gsrp">View OpenAPI specification</button>
+                <p>This set of APIs allow the rapid halting of payments that are suspected to have been made in error or in a fraudulent manner.</p>
+
+
+              <div class="authenticated hidden"><p>Download the <a href="/system/files/Cancellations.zip">Detailed Specifications</a> to learn more.</p>
+              </div>
+              <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#gsrp">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+              </div>
+              <p>Try the APIs in the sandbox with Postman or clone the <a href="https://github.com/swiftinc/gpi-v5-demo-app" target="_blank"><i class="fab fa-github"></i> GPI v5 demo app</a>.</p>
+
+            
+
+              <div class="postman-run-button"
+                data-postman-action="collection/fork"
+                data-postman-var-1="25313102-36180807-7d92-4127-b8e9-6dddee6cb371"
+                data-postman-collection-url="entityId=25313102-36180807-7d92-4127-b8e9-6dddee6cb371&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                <script type="text/javascript">
+                  (function (p,o,s,t,m,a,n) {
+                    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                      (n = o.createElement("script")),
+                      (n.id = s+t), (n.async = 1), (n.src = m), n
+                    ));
+                  }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                <div class="messaging-gsrp dataloader"></div>
+            </div>
+
+            <div id="swiftgo">
+                <h4>Swift Go API</h4>
+                <button id="loadData" class="loadData"  data-id="Swift Go Reference" data-identifier="messaging-slvp">View OpenAPI specification</button>
+                <p>The Swift Go API enables Swift Go participants to provide status updates via API to the Tracker for the payment messages they receive.</p>
+
+
+                  <div class="authenticated hidden"><p>Download the <a href="/sites/default/files/2024-03/SwiftGOPaymentStatusRequet.zip">Detailed Specification</a> to learn more.</p>
+                  </div>
+                  <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#swiftgo">Sign in</a> to access our toolbox section to download the detailed specification and other related information.</p>
+                  </div>
+
+                
+                <div class="postman-run-button"
+                data-postman-action="collection/fork"
+                data-postman-var-1="25313102-fc7497b6-74dc-4d32-a24f-99178374c3a4"
+                data-postman-collection-url="entityId=25313102-fc7497b6-74dc-4d32-a24f-99178374c3a4&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                <script type="text/javascript">
+                  (function (p,o,s,t,m,a,n) {
+                    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                      (n = o.createElement("script")),
+                      (n.id = s+t), (n.async = 1), (n.src = m), n
+                    ));
+                  }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                <div class="messaging-slvp dataloader"></div>
+            </div>
+
+            <div id="g4c">
+                <h4>GPI for Corporates API</h4>
+                <button id="loadData" class="loadData"  data-id="Tracker g4c Reference" data-identifier="messaging-gc">View OpenAPI specification</button>
+                <p>The API documentation provides detailed information on how to retrieve a corporate payment transaction using API.</p>
+
+
+              <div class="authenticated hidden"> <p>Additionally, download the <a href="/system/files/g4c_api_detailed_specification.zip">Detailed Specification</a> to learn more, download <a href="/system/files/g4c_api_schemas.zip">Schemas</a> to validate API requests and responses, download specification in <a href="/system/files/g4c_api_spec_oas3.zip">OAS 3.0</a> format to help you get started.</p>
+            </div>
+              <div class="not-authenticated hidden"> <p><a href="/signin?destination=reference#g4c">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+            </div>
+
+                        <div class="postman-run-button"
+              data-postman-action="collection/fork"
+              data-postman-var-1="25313102-63497765-c881-4ade-b74f-7b747f35dca2"
+              data-postman-collection-url="entityId=25313102-63497765-c881-4ade-b74f-7b747f35dca2&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                              <script type="text/javascript">
+                                (function (p,o,s,t,m,a,n) {
+                                  !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                                  !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                    (n = o.createElement("script")),
+                                    (n.id = s+t), (n.async = 1), (n.src = m), n
+                                  ));
+                                }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                              </script>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+               <div class="messaging-gc dataloader"></div>
+            </div>
+
+            <div id="gcase">
+                     <h4>Case resolution API</h4>
+                     <button id="loadData" class="loadData"  data-id="gCase Reference" data-identifier="messaging-gcase">View OpenAPI specification</button>
+
+                     <p>These APIs allow beneficiary and intermediary banks to manage case investigations quickly, reducing the number of manual queries.</p>
+
+                       <div class="authenticated hidden"> <p>Additionally download the <a href="/system/files/gpi_gCase_Detailed_Spec.zip">Detailed Specification</a> and the <a href="/system/files/gpi_gCase_Schemas.zip">Schemas</a> to help you get started.</p>
+                        </div>
+                       <div class="not-authenticated hidden"> <p><a href="/signin?destination=reference#gcase">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+                      </div>
+                     
+                    <div class="postman-run-button"
+                      data-postman-action="collection/fork"
+                      data-postman-var-1="25313102-3bf0d8fd-16df-497d-b369-0bf83a6f7cb0"
+                      data-postman-collection-url="entityId=25313102-3bf0d8fd-16df-497d-b369-0bf83a6f7cb0&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                         <script type="text/javascript">
+                           (function (p,o,s,t,m,a,n) {
+                             !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                             !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                               (n = o.createElement("script")),
+                               (n.id = s+t), (n.async = 1), (n.src = m), n
+                             ));
+                           }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                         </script>
+
+                     <span class="divider"></span>
+                     <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                    <div class="messaging-gcase dataloader"></div>
+              </div>
+
+              <div id="universal-confirmations">
+                  <h4>Universal confirmations API</h4>
+                  <button id="loadData" class="loadData"  data-id="Universal Confirmations Reference" data-identifier="messaging-uc">View OpenAPI specification</button>
+                  <p>This API allows all non-GPI financial institutions to update the status of the MT 103 payment message they received.</p>
+
+
+                    <div class="authenticated hidden"> <p>Download the <a href="/sites/default/files/2024-03/UCPaymentStatusRequest.zip">Detailed Specification</a> to learn more.</p>
+                    </div>
+                    <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#universal-confirmations">Sign in</a> to access our toolbox section to download the detailed specification and other related information.</p>
+                    </div>
+                    <p>Try the APIs in the sandbox with Postman or clone the <a href="https://github.com/swiftinc/gpi-v5-demo-app" target="_blank"><i class="fab fa-github"></i> GPI v5 demo app</a>.</p>
+
+                                    <div class="postman-run-button"
+                  data-postman-action="collection/fork"
+                  data-postman-var-1="25313102-d0dd7af0-a844-4995-be0f-18e2e1ed13fa"
+                  data-postman-collection-url="entityId=25313102-d0dd7af0-a844-4995-be0f-18e2e1ed13fa&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                  <script type="text/javascript">
+                    (function (p,o,s,t,m,a,n) {
+                      !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                      !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                        (n = o.createElement("script")),
+                        (n.id = s+t), (n.async = 1), (n.src = m), n
+                      ));
+                    }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                  </script>
+
+                  <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                  <div class="messaging-uc dataloader"></div>
+              </div>
+        </div>
+                <div id="pre-validation-overview" style="margin-bottom: 5rem">
+            <h3>Pre-Validation</h3>
+            <!--<p>Description of Business Intelligence</p>-->
+            <span class="divider"></span>
+            <h4>Overview</h4>
+            <p>APIs in this category are offered via the internet and the Swift multi-vendor secure IP network (MV-SIPN).</p>
+
+            <div id="payment-pre-validation-api">
+                <h4>Payment Pre-validation Consumer API</h4>
+                <button id="loadData" class="loadData"  data-id="Payment Pre-validation API" data-identifier="messaging-tracker-preval2">View OpenAPI specification</button>
+                <p></p>
+
+                  <div class="postman-run-button"
+                    data-postman-action="collection/fork"
+                    data-postman-var-1="25313102-63c315fb-dd2d-4b53-a858-476068998500"
+                    data-postman-collection-url="entityId=25313102-63c315fb-dd2d-4b53-a858-476068998500&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                               <script type="text/javascript">
+                                 (function (p,o,s,t,m,a,n) {
+                                   !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                                   !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                     (n = o.createElement("script")),
+                                     (n.id = s+t), (n.async = 1), (n.src = m), n
+                                   ));
+                                 }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                                 </script>
+
+
+              <div class="messaging-tracker-preval2 dataloader"></div>
+           </div>
+           <span class="divider"></span>
+           <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+           <div id="payment-pre-validation-data-provider-api">
+               <h4>Payment Pre-validation Data Provider</h4><button id="loadData" class="loadData"  data-id="Payment Pre-validation Data Provider API" data-identifier="messaging-tracker-preval1">View OpenAPI specification</button>
+
+               <div class="messaging-tracker-preval1 dataloader"></div>
+           </div>
+        </div>
+          <div id="securitiesSettlementView" style="margin-bottom: 5rem">
+                <h3>Securities</h3>
+                <span class="divider"></span>
+                <div id="securitiesSettlementView-id">
+                    <h4>Securities View API</h4>
+                    <button id="loadData" class="loadData"  data-id="Securities Settlement View" data-identifier="securities-api">View OpenAPI specification</button>
+                    <p>This API provides visibility on the end-to-end transaction flow to all parties involved in securities settlement.</p>
+
+              <div class="postman-run-button"
+              data-postman-action="collection/fork"
+              data-postman-var-1="25313102-925f9f66-3571-4c40-9084-ca99b80f1558"
+              data-postman-collection-url="entityId=25313102-925f9f66-3571-4c40-9084-ca99b80f1558&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                    <script type="text/javascript">
+                      (function (p,o,s,t,m,a,n) {
+                        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                          (n = o.createElement("script")),
+                          (n.id = s+t), (n.async = 1), (n.src = m), n
+                        ));
+                      }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                    </script>
+                    <div class="securities-api dataloader"></div>
+          </div>
+        </div>
+
+        
+                    <div id="case-manager" style="margin-bottom: 5rem">
+            <h3>Case Manager</h3>
+            <span class="divider"></span>
+            <div id="claim-non-receipt-api">
+                <h4>Claim Non Receipt API</h4>
+                <button id="loadData" class="loadData"  data-id="Claim Non Receipt Reference" data-identifier="claimnonreceipt-api">View OpenAPI specification</button>
+                <p>The Case Manager enables all institutions in scope to create/respond to “payment related investigations” in an efficient way. The Case Manager relies on central orchestration to streamline these investigations and reduce the impact of these on the end customers.</p>
+
+                <div class="authenticated hidden"><p>Download the <a href="/system/files/2024-04/ClaimNonReceipt.pdf">Detailed Specification</a> to learn more.</p>
+                </div>
+                <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#claim-non-receipt">Sign in</a> to access our toolbox section to download the detailed specification and other related information.</p>
+                </div>
+
+                                        <span class="divider"></span>
+                <div class="claimnonreceipt-api dataloader"></div>
+            </div>
+
+            <div id="investigation-action-api">
+                  <h4>Investigation Action API</h4>
+                  <button id="loadData" class="loadData"  data-id="Investigation Action Reference" data-identifier="investigationaction-api">View OpenAPI specification</button>
+                  <p>The Case Manager enables all institutions in scope to create/respond to “payment related investigations” in an efficient way. The Case Manager relies on central orchestration to streamline these investigations and reduce the impact of these on the end customers.</p>
+
+                  <div class="authenticated hidden"><p>Download the <a href="/system/files/2024-04/InvestigationActionRequest.pdf">Detailed Specification</a> to learn more.</p>
+                  </div>
+                  <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#investigation-action">Sign in</a> to access our toolbox section to download the detailed specification and other related information.</p>
+                  </div>
+
+                                        <span class="divider"></span>
+                  <div class="investigationaction-api dataloader"></div>
+            </div>
+
+            <div id="unable-to-apply-api">
+                <h4>Unable To Apply API</h4>
+                <button id="loadData" class="loadData"  data-id="Unable To Apply Reference" data-identifier="unabletoapply-api">View OpenAPI specification</button>
+                <p>The Case Manager enables all institutions in scope to create/respond to “payment related investigations” in an efficient way. The Case Manager relies on central orchestration to streamline these investigations and reduce the impact of these on the end customers.</p>
+
+                <div class="authenticated hidden"><p>Download the <a href="/system/files/2024-07/Updated_UnableToApply.pdf">Detailed Specification</a> to learn more.</p>
+                </div>
+                <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#unable-to-apply">Sign in</a> to access our toolbox section to download the detailed specification and other related information.</p>
+                </div>
+
+                                        <span class="divider"></span>
+                <div class="unabletoapply-api dataloader"></div>
+            </div>
+
+            <div id="request-for-information-api">
+                            <h4>Request For Information API</h4>
+                            <button id="loadData" class="loadData"  data-id="Request For Information Reference" data-identifier="requestforinformation-api">View OpenAPI specification</button>
+                            <p>The Case Manager enables all institutions in scope to create/respond to “payment related investigations” in an efficient way. The Case Manager relies on central orchestration to streamline these investigations and reduce the impact of these on the end customers.</p>
+
+                            <div class="authenticated hidden"><p>Download the <a href="/system/files/2024-08/RequestForInformation.pdf">Detailed Specification</a> to learn more.</p>
+                            </div>
+                            <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#request-for-information-api">Sign in</a> to access our toolbox section to download the detailed specification and other related information.</p>
+                            </div>
+
+                                                            <div class="requestforinformation-api dataloader"></div>
+            </div>
+
+        </div>
+        <div id="compliance-overview" style="margin-bottom: 5rem">
+            <h3>Compliance</h3>
+            <!--<p>Description of compliance</p>-->
+            <span class="divider"></span>
+            <h4>Overview</h4>
+            <p>APIs in this category are offered via the internet.</p>
+            <div id="kyc-registry">
+                <h4>Swift KYC Registry API</h4><button id="loadData" class="loadData"  data-id="KYC Reference" data-identifier="compliance-kyc">View OpenAPI specification</button>
+                <p>Check <a href="/kyc-registry-api-sandbox-guide">KYC Registry API Sandbox Guide</a> to learn more about the sandbox.</p></br>
+                <div class="postman-run-button authenticated-kyc hidden"
+                  data-postman-action="collection/fork"
+                  data-postman-var-1="25313102-8789884e-aa99-4ff0-ae47-3e2b0d31fb2b"
+                  data-postman-collection-url="entityId=25313102-8789884e-aa99-4ff0-ae47-3e2b0d31fb2b&entityType=collection&workspaceId=050424a9-3429-4f9f-845d-b84103e79f1b"></div>
+
+                <div class="postman-run-button not-authenticated-kyc"
+                  data-postman-action="collection/fork"
+                  data-postman-var-1="25313102-1a68833c-09fe-4224-b5e2-27845d469dc0"
+                  data-postman-collection-url="entityId=25313102-1a68833c-09fe-4224-b5e2-27845d469dc0&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+
+                <script type="text/javascript">
+                  (function (p,o,s,t,m,a,n) {
+                    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                      (n = o.createElement("script")),
+                      (n.id = s+t), (n.async = 1), (n.src = m), n
+                    ));
+                  }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+
+                <span class="divider"></span>
+                <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+
+                <div class="compliance-kyc dataloader"></div>
+            </div>
+
+            <div id="transaction-screening">
+                <h4>Transaction Screening API</h4>
+                <button id="loadData" class="loadData"  data-id="Transaction Screening Reference" data-identifier="transaction-screening">View OpenAPI specification</button>
+
+                          <p>The Transaction Screening API enables you to submit a transaction to be screened by the Transaction Screening Service.</p>
+
+
+                          <div class="postman-run-button"
+                            data-postman-action="collection/fork"
+                            data-postman-var-1="25313102-9de00cfa-5a70-457a-907f-6aced8fd0c55"
+                            data-postman-collection-url="entityId=25313102-9de00cfa-5a70-457a-907f-6aced8fd0c55&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                          <script type="text/javascript">
+                            (function (p,o,s,t,m,a,n) {
+                              !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                              !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                (n = o.createElement("script")),
+                                (n.id = s+t), (n.async = 1), (n.src = m), n
+                              ));
+                            }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));</script>
+
+
+
+                <span class="divider"></span>
+                <div class="transaction-screening dataloader"></div>
+            </div>
+
+            <div id="compliance-analytics">
+                <h4>Compliance Analytics API</h4>
+                <button id="loadData" class="loadData"  data-id="Compliance Analytics API Reference" data-identifier="compliance-analytics">View OpenAPI specification</button>
+
+                          <p>The Compliance Analytics API allows you to programmatically access your Compliance Analytics data and automate your financial crime-related use cases.</p>
+
+
+                          <div class="postman-run-button"
+                          data-postman-action="collection/fork"
+                          data-postman-var-1="25313102-b054e501-9c63-4d33-8e02-96eceb610f42"
+                          data-postman-collection-url="entityId=25313102-b054e501-9c63-4d33-8e02-96eceb610f42&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                          <script type="text/javascript">
+                            (function (p,o,s,t,m,a,n) {
+                              !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                              !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                (n = o.createElement("script")),
+                                (n.id = s+t), (n.async = 1), (n.src = m), n
+                              ));
+                            }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));</script>
+
+
+                <div class="compliance-analytics dataloader"></div>
+            </div>
+        </div>
+        <div id="refdata-overview" style="margin-bottom: 5rem">
+            <h3>RefData</h3>
+            <!--<p>Description of compliance</p>-->
+            <span class="divider"></span>
+            <h4>Overview</h4>
+            <p>APIs in this category are offered via the internet.</p>
+            <div id="swiftref">
+                <h4>SWIFTRef API</h4><button id="loadData" class="loadData"  data-id="SWIFTRef Reference" data-identifier="compliance-swifref">View OpenAPI specification</button>
+               <p>The API documentation provides detailed information on how to retrieve reference data using APIs.</p>
+
+              <div class="authenticated hidden"><p>Additionally, download the <a href="/system/files/Technical_Specification_RESTFul_API_JSON_Format.pdf">Technical Specification - JSON</a></p>
+              </div>
+              <div class="not-authenticated hidden"><p><a href="/signin?destination=reference#swiftref">Sign in</a> to access our toolbox section to download the specification and other related information.</p>
+              </div>
+
+            
+               <div class="postman-run-button"
+                data-postman-action="collection/fork"
+                data-postman-var-1="25313102-75b1fb29-98ca-4b31-b2ed-54f1173b7980"
+                data-postman-collection-url="entityId=25313102-75b1fb29-98ca-4b31-b2ed-54f1173b7980&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                <script type="text/javascript">
+                  (function (p,o,s,t,m,a,n) {
+                    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                      (n = o.createElement("script")),
+                      (n.id = s+t), (n.async = 1), (n.src = m), n
+                    ));
+                  }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                </script>
+                <!--<span class="divider"></span>-->
+                <div class="compliance-swifref dataloader"></div>
+            </div>
+            <div class="compliance-sads dataloader"></div>
+        </div>
+        <div id="relationship-management" style="margin-bottom: 5rem">
+          <h3>Relationship Management</h3>
+           <!--<p>Description of Relationship Management</p>-->
+           <span class="divider"></span>
+           <div id="rma-api">
+           <h4>RMA API</h4>
+
+           <button id="loadData" class="loadData"  data-id="RMA API Reference" data-identifier="rma-api">View OpenAPI specification</button>
+
+           <p>This API service provides the capability for customer's applications to query authorization related information stored in the central RMA data store.</p>
+
+          
+            <div class="rma-api dataloader"></div>
+            </div>
+        </div>
+        <div id="business-intelligence-overview" style="margin-bottom: 5rem">
+            <h3>Business Intelligence</h3>
+            <!--<p>Description of Business Intelligence</p>-->
+            <span class="divider"></span>
+                <h4>Overview</h4>
+                 <p>APIs in this category are offered via the internet.</p>
+                 <div id="banking-analytics-premium">
+                     <h4>Banking Analytics Premium API</h4>
+                     <button id="loadData" class="loadData"  data-id="Banking Analytics Premium API Reference" data-identifier="banking-analytics-premium-api">View OpenAPI specification</button>
+
+                               <p>The Banking Analytics Premium API services will allow you to compare charging and other practices against the market, understand your sales performance in different markets and rank it over time, and finally use Letter of Credit confirmations and tenor data to assess your competitiveness in key markets.</p>
+
+
+                               <div class="postman-run-button"
+                                data-postman-action="collection/fork"
+                                data-postman-var-1="25313102-605dfdd5-ad0f-45a0-bbba-a1c8f77ee93f"
+                                data-postman-collection-url="entityId=25313102-605dfdd5-ad0f-45a0-bbba-a1c8f77ee93f&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                               <script type="text/javascript">
+                                 (function (p,o,s,t,m,a,n) {
+                                   !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                                   !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                     (n = o.createElement("script")),
+                                     (n.id = s+t), (n.async = 1), (n.src = m), n
+                                   ));
+                                 }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                                 </script>
+
+
+                               <span class="divider"></span>
+                               <!--<p>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                     <div class="banking-analytics-premium-api dataloader"></div>
+                 </div>
+                 <div id="observer-analytics">
+                     <h4>Observer Analytics API</h4>
+                     <button id="loadData" class="loadData"  data-id="Observer Analytics API" data-identifier="observer-analytics-api">View OpenAPI specification</button>
+
+                               <p>The Observer Analytics API enables institutions to access and integrate payments data enriched with Observer computation on speed, fees, end-to-end routing, GPI KPIs, and Swift Totals per market.</p>
+
+
+                               <div class="postman-run-button"
+                                data-postman-action="collection/fork"
+                                data-postman-var-1="25313102-9410334a-52ff-4685-8a86-7b5cf61e01fb"
+                                data-postman-collection-url="entityId=25313102-9410334a-52ff-4685-8a86-7b5cf61e01fb&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                               <script type="text/javascript">
+                                 (function (p,o,s,t,m,a,n) {
+                                   !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                                   !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                     (n = o.createElement("script")),
+                                     (n.id = s+t), (n.async = 1), (n.src = m), n
+                                   ));
+                                 }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                                 </script>
+
+
+                     <div class="observer-analytics-api dataloader"></div>
+                 </div>
+            </div>
+         <div id="notification-service" style="margin-bottom: 5rem">
+                   <h3>Notification Service</h3>
+                   <!--<p>Description of Notification Service</p>-->
+                   <span class="divider"></span>
+                        <div id="notification">
+                       <h4>Notification API</h4>
+
+                       <button id="loadData" class="loadData"  data-id="Notification API Reference" data-identifier="notification-api">View OpenAPI specification</button>
+
+                       <p>The Notification API allows clients to subscribe and receive notifications to the Swift services they use via multiple delivery channel(s).</p>
+
+                        <div class="postman-run-button"
+                          data-postman-action="collection/fork"
+                          data-postman-var-1="25313102-c9b8d18e-ed3d-42cf-a7e4-a046d9eb919a"
+                          data-postman-collection-url="entityId=25313102-c9b8d18e-ed3d-42cf-a7e4-a046d9eb919a&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+                                                      <script type="text/javascript">
+                                                        (function (p,o,s,t,m,a,n) {
+                                                          !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                                                          !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                                            (n = o.createElement("script")),
+                                                            (n.id = s+t), (n.async = 1), (n.src = m), n
+                                                          ));
+                                                        }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+                                                        </script>
+
+
+                      <div class="notification-api dataloader"></div>
+                   </div>
+                   </div>
+
+
+                   <div id="tradingfinance-service" style="margin-bottom: 5rem">
+   <h3>Trade Finance</h3>
+   <span class="divider"></span>
+   <div id="tradingfinance">
+      <h4>Trade Finance Validation Service</h4>
+      <button id="loadData" class="loadData"  data-id="Trade Finance Validation Service" data-identifier="tradingfinance-api">View OpenAPI specification</button>
+      <p>The Trade Financing Validation Service powered by MonetaGo performs checks on financing documents to prevent domestic and crossborder duplicate financing frauds in trade finance.</p>
+
+          <span class="divider"></span>
+      <div class="tradingfinance-api dataloader"></div>
+   </div>
+
+      <div id="bank-guarantee">
+        <h4>Bank Guarantee API</h4>
+        <button id="loadData" class="loadData"  data-id="Bank Guarantee Reference" data-identifier="bank-guarantee">View OpenAPI specification</button>
+        <p>The Demand Guarantee API manages all processes involved in the life cycle of a demand guarantee between applicant and issuing bank & advising bank and beneficiary.</p>
+
+        <div class="postman-run-button"
+          data-postman-action="collection/fork"
+          data-postman-var-1="25313102-2a122568-5fdc-42ad-bc77-9ffece41bb43"
+          data-postman-collection-url="entityId=25313102-2a122568-5fdc-42ad-bc77-9ffece41bb43&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+            <script type="text/javascript">
+              (function (p,o,s,t,m,a,n) {
+                !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                  (n = o.createElement("script")),
+                  (n.id = s+t), (n.async = 1), (n.src = m), n
+                ));
+              }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+            </script>
+
+        <span class="divider"></span>
+        <div class="bank-guarantee dataloader"></div>
+      </div>
+
+      <div id="bank-guarantee-notification">
+          <h4>Bank Guarantee Notification API</h4>
+          <button id="loadData" class="loadData"  data-id="Bank Guarantee Notification Reference" data-identifier="bank-guarantee-notification">View OpenAPI specification</button>
+          <p>The Demand Guarantee Notification API manages delivering all events involved in the life cycle of a demand guarantee application between applicant, issuing banks, beneficiary and advising bank informing the lifecycle status of an application or an event require action.</p>
+          <div class="bank-guarantee-notification dataloader"></div>
+      </div>
+</div>
+<div id="connectivity" style="margin-bottom: 5rem">
+   <h3>Connectivity</h3>
+   <span class="divider"></span>
+   <div id="swift-messaging">
+      <h4>Swift messaging API</h4>
+      <button id="loadData" class="loadData"  data-id="Swift messaging API" data-identifier="swift-messaging-api">View OpenAPI specification</button>
+      <p>The Swift messaging API enables your Back office applications to communicate with any Swift counterparty through Alliance Cloud by embedding Swift messages inside API calls, which offers easy and direct integration with Alliance Cloud via standard RESTful connectivity.</p>
+
+   <div class="postman-run-button"
+    data-postman-action="collection/fork"
+    data-postman-var-1="25313102-49e90edf-f8b3-444d-92a4-c08c45df2de5"
+    data-postman-collection-url="entityId=25313102-49e90edf-f8b3-444d-92a4-c08c45df2de5&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+      <script type="text/javascript">
+         (function (p,o,s,t,m,a,n) {
+           !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+           !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+             (n = o.createElement("script")),
+             (n.id = s+t), (n.async = 1), (n.src = m), n
+           ));
+         }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+      </script>
+
+
+      <div class="swift-messaging-api dataloader"></div>
+   </div>
+</div>
+<div id="eba-overview">
+   <h3>EBA API</h3>
+   <span class="divider"></span>
+   <h4>Overview</h4>
+   <p>APIs in this category are offered via the Swift multi-vendor secure IP network (MV-SIPN).</p>
+   <div id="step2-cgs">
+      <h4>STEP2 Continuous Gross Settlement</h4>
+      <button id="loadData" class="loadData"  data-id="Clearing Continuous Gross Settlement API" data-identifier="eba-loader-api1">View OpenAPI specification</button>
+      <p>Provided by EBA Clearing.</p>
+
+
+    <div class="postman-run-button"
+      data-postman-action="collection/fork"
+      data-postman-var-1="25313102-6538be87-bfc7-4926-a647-c6aa220ce4ce"
+      data-postman-collection-url="entityId=25313102-6538be87-bfc7-4926-a647-c6aa220ce4ce&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+        <script type="text/javascript">
+           (function (p,o,s,t,m,a,n) {
+             !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+             !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+               (n = o.createElement("script")),
+               (n.id = s+t), (n.async = 1), (n.src = m), n
+             ));
+           }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+        </script>
+
+
+      <div class="eba-loader-api1 dataloader"></div>
+   </div>
+</div>
+
+<div id="step2-sdd-b2b">
+   <span class="divider"></span>
+   <div>
+      <h4>STEP2 SEPA Direct Debit B2B</h4>
+      <button id="loadData" class="loadData"  data-id="B2B Direct Debit api" data-identifier="eba-loader-api2">View OpenAPI specification</button>
+      <p>Provided by EBA Clearing.</p>
+
+
+    <div class="postman-run-button"
+      data-postman-action="collection/fork"
+      data-postman-var-1="25313102-23dcc616-4c2a-473e-a9cf-f16d8c0e2ed0"
+      data-postman-collection-url="entityId=25313102-23dcc616-4c2a-473e-a9cf-f16d8c0e2ed0&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+      <script type="text/javascript">
+         (function (p,o,s,t,m,a,n) {
+           !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+           !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+             (n = o.createElement("script")),
+             (n.id = s+t), (n.async = 1), (n.src = m), n
+           ));
+         }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+      </script>
+
+
+      <div class="eba-loader-api2 dataloader"></div>
+   </div>
+</div>
+<div id="step2-sdd-core">
+   <span class="divider"></span>
+   <div>
+      <h4>STEP2 SEPA Direct Debit CORE</h4>
+      <button id="loadData" class="loadData"  data-id="Core Direct Debit API" data-identifier="eba-loader-api3">View OpenAPI specification</button>
+      <p>Provided by EBA Clearing.</p>
+
+
+    <div class="postman-run-button"
+      data-postman-action="collection/fork"
+      data-postman-var-1="25313102-c14dcf4f-b867-4176-921a-71ec773aa7c1"
+      data-postman-collection-url="entityId=25313102-c14dcf4f-b867-4176-921a-71ec773aa7c1&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+      <script type="text/javascript">
+         (function (p,o,s,t,m,a,n) {
+           !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+           !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+             (n = o.createElement("script")),
+             (n.id = s+t), (n.async = 1), (n.src = m), n
+           ));
+         }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+      </script>
+
+
+      <div class="eba-loader-api3 dataloader"></div>
+   </div>
+</div>
+<div id="step2-sct">
+   <span class="divider"></span>
+   <div>
+      <h4>STEP2 SEPA Credit Transfer</h4>
+      <button id="loadData" class="loadData"  data-id="SEPA Credit Transfer API" data-identifier="eba-loader-api4">View OpenAPI specification</button>
+      <p>Provided by EBA Clearing.</p>
+
+
+ <div class="postman-run-button"
+data-postman-action="collection/fork"
+data-postman-var-1="25313102-6b993910-3619-439c-ab68-31ab4308dc17"
+data-postman-collection-url="entityId=25313102-6b993910-3619-439c-ab68-31ab4308dc17&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+      <script type="text/javascript">
+         (function (p,o,s,t,m,a,n) {
+           !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+           !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+             (n = o.createElement("script")),
+             (n.id = s+t), (n.async = 1), (n.src = m), n
+           ));
+         }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+      </script>
+
+
+      <div class="eba-loader-api4 dataloader"></div>
+   </div>
+  </div>
+
+  <div id="rt1-sct-inst">
+   <span class="divider"></span>
+   <div>
+      <h4>RT1 SEPA Credit Transfer Inst</h4>
+      <button id="loadData" class="loadData"  data-id="RT1 API" data-identifier="eba-loader-api5">View OpenAPI specification</button>
+      <p>Provided by EBA Clearing.</p>
+
+
+    <div class="postman-run-button"
+      data-postman-action="collection/fork"
+      data-postman-var-1="25313102-62a9a40e-c7ce-42fc-a971-c2e791aa8b68"
+      data-postman-collection-url="entityId=25313102-62a9a40e-c7ce-42fc-a971-c2e791aa8b68&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+      <script type="text/javascript">
+         (function (p,o,s,t,m,a,n) {
+           !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+           !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+             (n = o.createElement("script")),
+             (n.id = s+t), (n.async = 1), (n.src = m), n
+           ));
+         }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+      </script>
+
+
+      <div class="eba-loader-api5 dataloader"></div>
+   </div>
+  </div>
+    <div id="instant-treasury" style="margin-bottom: 5rem">
+   <h3>Instant Treasury</h3>
+   <span class="divider"></span>
+   <div id="paymentinitiation">
+      <h4>Payment Initiation API</h4>
+      <button id="loadData" class="loadData"  data-id="Payment Initiation API" data-identifier="paymentinitiation-api">View OpenAPI specification</button>
+      <p>The Payment Initiation API is used by a debtor to instruct their bank (or other payment service provider) to move funds from their account to a beneficiary account.</p>
+
+    
+      <div class="postman-run-button"
+        data-postman-action="collection/fork"
+        data-postman-var-1="25313102-acabf5d1-feae-4202-b4f5-9753d17c3d4f"
+        data-postman-collection-url="entityId=25313102-acabf5d1-feae-4202-b4f5-9753d17c3d4f&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+      <script type="text/javascript">
+         (function (p,o,s,t,m,a,n) {
+           !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+           !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+             (n = o.createElement("script")),
+             (n.id = s+t), (n.async = 1), (n.src = m), n
+           ));
+         }(window, document, "_pm", "PostmanRunObject", "/sites/all/modules/custom/swift_reference/postman.js"));
+      </script>
+
+
+      <div class="paymentinitiation-api dataloader"></div>
+   </div>
+
+   <div id="instant-cash-reporting">
+   <span class="divider"></span>
+   <div>
+      <h4>Instant Cash Reporting API</h4>
+      <button id="loadData" class="loadData"  data-id="Instant Cash Reporting API" data-identifier="instant-cash-reporting-api">View OpenAPI specification</button>
+      <p>The solution for seamless, secure and reliable account data delivery.</p>
+
+
+      <div class="postman-run-button"
+      data-postman-action="collection/fork"
+      data-postman-var-1="25313102-af70c9b1-72b6-4827-af5c-9178b5595d05"
+      data-postman-collection-url="entityId=25313102-af70c9b1-72b6-4827-af5c-9178b5595d05&entityType=collection&workspaceId=2281da12-3425-442f-86d8-1e8ff3695aaa"></div>
+      <script type="text/javascript">
+         (function (p,o,s,t,m,a,n) {
+           !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+           !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+             (n = o.createElement("script")),
+             (n.id = s+t), (n.async = 1), (n.src = m), n
+           ));
+         }(window, document, "_pm", "PostmanRunObject", "modules/custom/swift_api_reference/js/postman.js"));
+      </script>
+
+
+      <div class="instant-cash-reporting-api dataloader"></div>
+   </div>
+  </div>
+  </div>
+
+<div id="boe-overview" style="margin-top: 5rem">
+   <h3>Bank of England RTGS <div class="bank_logo_icon" style=""><img alt="" src="themes/custom/swift_devportal_9/assets/images/BankOfEnglandLogo.svg" width="40" /></div></h3>
+   <span class="divider"></span>
+   <h4>Overview</h4>
+   <p>RTGS APIs will allow Participants to develop sophisticated and automated real-time tools for accessing RTGS transactional data.</p>
+   <p>To get an overview of the high level steps to get started, go here: <a href="/getting-started-rtgs-apis">Getting started with RTGS APIs </a></p>
+
+  <div id="boe-accounts">
+  <span class="divider"></span>
+      <h4>Accounts API</h4>
+      <button id="loadData" class="loadData"  data-id="Accounts API" data-identifier="accounts-loader">View OpenAPI specification</button>
+      <div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Accounts API enables a Participant to retrieve information associated with their RTGS Accounts they are authorised to, like account balance, account details, balance allocations and accounts reports.</p></div>
+      <div class="accounts-loader dataloader"></div>
+   </div>
+    <div id="boe-settlement">
+    <span class="divider"></span>
+      <h4>Settlement Liquidity Groups API</h4>
+      <button id="loadData" class="loadData"  data-id="Settlement Liquidity Groups API" data-identifier="settlement-loader">View OpenAPI specification</button>
+<div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Settlement Liquidity Groups API enables Participants to retrieve information associated with the Settlement Liquidity Groups they are authorised to, like basic settlement liquidity group details and associated balance allocations.</p></div>
+      <div class="settlement-loader dataloader"></div>
+   </div>
+      <div id="boe-notifications">
+   <span class="divider"></span>
+      <h4>Notifications API</h4>
+      <button id="loadData" class="loadData"  data-id="Notifications API" data-identifier="notifications-loader">View OpenAPI specification</button>
+<div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Notifications API enables Participants to retrieve a list of notifications that are triggered when an event occurs in RTGS.</p></div>
+      <div class="notifications-loader dataloader"></div>
+   </div>
+  <div id="boe-reconciliation-responses">
+      <span class="divider"></span>
+      <h4>Reconciliation Responses API</h4>
+      <button id="loadData" class="loadData"  data-id="Reconciliation Responses API" data-identifier="reconciliation-responses-loader">View OpenAPI specification</button>
+<div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Reconciliation Responses API enables Participants to view a single reconciliation response and create a reconciliation response.</p></div>
+      <div class="reconciliation-responses-loader dataloader"></div>
+   </div>
+   <div id="boe-participants">
+   <span class="divider"></span>
+      <h4>Participants API</h4>
+      <button id="loadData" class="loadData"  data-id="Participants API" data-identifier="participants-loader">View OpenAPI specification</button>
+<div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Participants API enables Participants to view and manage their Organisation information and associated key configuration parameters for efficient transaction processing.</p></div>
+      <div class="participants-loader dataloader"></div>
+   </div>
+     <div id="boe-chaps-payments">
+
+     <span class="divider"></span>
+      <h4>CHAPS Payments Controls API</h4>
+      <button id="loadData" class="loadData"  data-id="CHAPS Payments Controls API" data-identifier="chaps-loader">View OpenAPI specification</button>
+      <div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The CHAPS Payments Controls API enables Participants to update the configuration of the CHAPS Payment control parameters for effective processing of CHAPS transactions they are party to.</p></div>
+      <div class="chaps-loader dataloader"></div>
+   </div>
+   <div id="boe-transactions">
+      <span class="divider"></span>
+      <h4>Transactions API</h4>
+      <button id="loadData" class="loadData"  data-id="Transactions API" data-identifier="transactions-loader">View OpenAPI specification</button>
+      <div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Transactions API enables Participants to retrieve Transaction details for all Schemes they are authorised to, including Clearing details for DNS.</p></div>
+      <div class="transactions-loader dataloader"></div>
+   </div>
+   <div id="boe-full-payment">
+    <span class="divider"></span>
+      <h4>Full Payment Message API</h4>
+      <button id="loadData" class="loadData"  data-id="Full Payment Message API" data-identifier="full-payment-loader">View OpenAPI specification</button>
+      <div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Full Payment Messages API enables Participants to retrieve the raw ISO 20022 payment messages submitted to Bank of England (pac.008, pacs.009, pacs.009COV and pacs.004).</p></div>
+
+      <div class="full-payment-loader dataloader"></div>
+   </div>
+
+     <div id="boe-rtgs">
+      <span class="divider"></span>
+      <h4>Raw Payment Messages API</h4>
+      <button id="loadData" class="loadData"  data-id="Raw Payment Messages API" data-identifier="eba-loader-api6">View OpenAPI specification</button>
+      <div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Raw Payment Messages API enables Participants to retrieve the CHAPS ISO 20022 payment messages submitted to Bank of England (pac.008, pacs.009, pacs.009COV and pacs.004) to which they are a party.</p></div>
+
+      <div class="eba-loader-api6 dataloader"></div>
+   </div>
+    <div id="boe-tasks">
+    <span class="divider"></span>
+      <h4>Tasks API</h4>
+      <button id="loadData" class="loadData"  data-id="Tasks API" data-identifier="tasks-loader">View OpenAPI specification</button>
+<div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Tasks API enables Participants to retrieve the details and status of Tasks they are authorised to.</p></div>
+      <div class="tasks-loader dataloader"></div>
+   </div>
+
+
+     <div id="boe-filter">
+     <span class="divider"></span>
+      <h4>Filter Values API</h4>
+      <button id="loadData" class="loadData"  data-id="Filter Values API" data-identifier="filter-loader">View OpenAPI specification</button>
+      <div style="margin-bottom: 10px;display:inline-block; width:100%;"><p>The Filter Values API enables Participants to retrieve the Codes and Names used in various API responses and Filters.</p></div>
+      <div class="filter-loader dataloader"></div>
+   </div>
+</div>
+
+
+ </div>
+</div>
+
+
+  
+  
+  </div>
+
+
+  </div>
+
+              </section>
+
+                </div>
+
+        </div>
+
+      <footer class="footer container-fluid footer__default" role="contentinfo">
+    <div class="footer-content-wrapper">
+        <img src="/themes/custom/swift_devportal_9/assets/img/svg/SWIFT-logo-new-brown.svg"/>
+          <div class="region region-footer">
+    <section id="block-copyrights" class="block block-block-content block-block-content360ca039-47fe-4518-be6f-8a2eb72e3900 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="contact-copyright-block"><a href="/contact-us">Contact Us</a> <span id="copyright" style="text-transform: none;">© Swift</span></div>
+<script>
+  const date = new Date();
+  const year = date.getFullYear();
+  document.getElementById("copyright").innerHTML = "© " + year + " Swift";
+</script></div>
+      
+  </section>
+
+<nav role="navigation" aria-labelledby="block-footermenu-menu" id="block-footermenu">
+            
+  <h2 class="visually-hidden" id="block-footermenu-menu">Footer Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-footer-menu nav">
+                      <li class="first">
+                                                        <a href="/themes/custom/swift_devportal_9/assets/pdf/PRIVACY_STATEMENT_SWIFT_DEVELOPER_PORTAL.pdf">Privacy statement</a>
+              </li>
+                      <li>
+                                                        <a href="/themes/custom/swift_devportal_9/assets/pdf/SWIFT_Developer_Portal_TermsofUse_2019.pdf">Terms Of Use</a>
+              </li>
+                      <li class="last">
+                                                        <a href="/contact-us" data-drupal-link-system-path="node/376">Need help?</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </div>
+</footer>  
+  </div>
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"reference","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx9kOsKgzAMhV-orr_3NCGtsVSrCW3U-fbrxpi7uEHI5TsHAsehH0C5lli37xA9T8b9EPtiHLMWzShWWHih_EKUOWkUQzN45iFSHaOkiJMnewShpQ7npCYwh0SgGGyo7fM-YY-XdziassZOASVCpo4y3Z5katkfKnfWVNY82cPX0iKcFROcbUjsMDXF5yha_hh0S3EKpmxFaawZFTIruY7zCHseX-QKje-TOg","theme":"swift_devportal_9","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_environment":false},"tagIds":["GTM-TJJ4B6Q"]},"gtag":{"tagId":"","consentMode":true,"otherIds":[],"events":[],"additionalConfigInfo":[]},"back_to_top":{"back_to_top_button_trigger":100,"back_to_top_prevent_on_mobile":true,"back_to_top_prevent_in_admin":false,"back_to_top_button_type":"image","back_to_top_button_text":"Back to top"},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Cp\u003EBy using this site, you agree to our use of cookies, which we use in order to enhance your browsing experience in accordance with our\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EPrivacy Policy\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EOK\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003E\u0026lt;none\u0026gt;\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EPrivacy Policy\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EOK\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003E\u0026lt;none\u0026gt;\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/sites\/default\/files\/SwiftDeveloperPortal_Cookie_Policy_V1.pdf","popup_link_new_window":true,"popup_position":true,"fixed_top_position":false,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button \u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"olivero_primary_button_classes":"","olivero_secondary_button_classes":"","close_button_action":"close_banner","open_by_default":true,"modules_allow_popup":true,"hide_the_banner":false,"geoip_match":true},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"user_roles":["anonymous"],"user":{"uid":0,"permissionsHash":"f9632376256cdd62fdb9ef4bb206d3e9a371d78440bb12dc24f841ca04bc020e"}}</script>
+<script src="/sites/default/files/js/js_Vy3BJZDOozvZLbiZpEGWLril_rwLui1Ih5h6LeW42Dg.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=swift_devportal_9&amp;include=eJx9j-sOwyAIhV_Izt97GoMWja0WorRd335uWdZduiUkcD5OwsGCG41QK9Z2n81Qlf2xio4mVbcqmBuvqOoavZgeF6YikMxZh0QWUldlS3EKfwyuRJaqVrSeSjaWSKoUYP1FFM7GEY0RW8ucIkwO9RFshzzMSVQgCgmNQNBB8ruE8KlPMMBF7QmYmBYsL0SIkkR-vAMcTUGPBW9B7qxrrHuyQ1_BntwVt76TOg"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_XwJ3cmbicXsJ4oRBRnBXso0iJjD9akaYBcs8JIIgjoA.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=swift_devportal_9&amp;include=eJx9j-sOwyAIhV_Izt97GoMWja0WorRd335uWdZduiUkcD5OwsGCG41QK9Z2n81Qlf2xio4mVbcqmBuvqOoavZgeF6YikMxZh0QWUldlS3EKfwyuRJaqVrSeSjaWSKoUYP1FFM7GEY0RW8ucIkwO9RFshzzMSVQgCgmNQNBB8ruE8KlPMMBF7QmYmBYsL0SIkkR-vAMcTUGPBW9B7qxrrHuyQ1_BntwVt76TOg"></script>
+<script src="/modules/contrib/eu_cookie_compliance/js/eu_cookie_compliance.min.js?v=10.2.4" defer></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?sjehwi"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?sjehwi"></script>
+<script src="/sites/default/files/js/js_224A80Ou4p9igtt16BhBwQoo8dcYBKRBVuSsMOi9vIA.js?scope=footer&amp;delta=6&amp;language=en&amp;theme=swift_devportal_9&amp;include=eJx9j-sOwyAIhV_Izt97GoMWja0WorRd335uWdZduiUkcD5OwsGCG41QK9Z2n81Qlf2xio4mVbcqmBuvqOoavZgeF6YikMxZh0QWUldlS3EKfwyuRJaqVrSeSjaWSKoUYP1FFM7GEY0RW8ucIkwO9RFshzzMSVQgCgmNQNBB8ruE8KlPMMBF7QmYmBYsL0SIkkR-vAMcTUGPBW9B7qxrrHuyQ1_BntwVt76TOg"></script>
+<script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+
+<noscript><img src="https://developer.swift.com/akam/13/pixel_22e21cf8?a=dD02MjEwMjE1ZjMzMDY2Njk0YWFmN2E5YjM3M2I1NDFhOTM3MTNjOGJmJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>
